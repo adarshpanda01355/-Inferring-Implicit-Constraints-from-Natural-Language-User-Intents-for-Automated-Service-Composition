@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_011",
+  "constraints": [
+    {
+      "id": "TRAVEL_011_C1",
+      "description": "tomorrow must be grounded to the calendar date immediately following the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete travel date is required to search train schedules and fares."
+    },
+    {
+      "id": "TRAVEL_011_C2",
+      "description": "early tomorrow implies a fuzzy morning departure window",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request needs an interpreted time range because 'early' has no universally fixed cutoff."
+    },
+    {
+      "id": "TRAVEL_011_C3",
+      "description": "destination station must be in Copenhagen rather than an unspecified broader region",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Train booking requires selecting valid arrival stations serving Copenhagen."
+    },
+    {
+      "id": "TRAVEL_011_C4",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for a valid booking when not otherwise specified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

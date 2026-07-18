@@ -1,0 +1,55 @@
+{
+  "request_id": "HEALTH_023",
+  "constraints": [
+    {
+      "id": "HEALTH_023_C1",
+      "description": "The child must be within the eligible age range and medically appropriate to receive an MMR vaccination.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Vaccination booking requires basic clinical eligibility and age suitability, which are standard prerequisites but not explicitly stated."
+    },
+    {
+      "id": "HEALTH_023_C2",
+      "description": "A legal guardian or authorized adult must be available to consent to and accompany the child for the vaccination if required.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "For a minor receiving medical treatment, consent and accompaniment are standard operational requirements."
+    },
+    {
+      "id": "HEALTH_023_C3",
+      "description": "The selected clinic must provide pediatric or minor vaccination services rather than only adult immunization.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Because the patient is a child, service selection must ensure the provider can vaccinate minors."
+    },
+    {
+      "id": "HEALTH_023_C4",
+      "description": "The appointment should fall within clinic operating hours on the first weekend of next month, accounting for reduced or unavailable weekend service.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Weekend scheduling feasibility depends on provider opening times, which must align with the requested period."
+    },
+    {
+      "id": "HEALTH_023_C5",
+      "description": "\"Later in the afternoon\" should be interpreted as a late-afternoon time slot rather than early afternoon.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The preference is not precisely defined and requires approximate interpretation for scheduling."
+    },
+    {
+      "id": "HEALTH_023_C6",
+      "description": "If no suitable clinic is available in Charlottenburg, nearby reachable options within Berlin may need to be considered as a fallback.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request specifies Charlottenburg explicitly, but planning may require interpreting whether nearby alternatives are acceptable if none are available there."
+    }
+  ],
+  "constraint_count": 6,
+  "density": "High"
+}

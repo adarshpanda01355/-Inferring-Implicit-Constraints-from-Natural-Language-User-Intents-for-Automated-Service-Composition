@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_010",
+  "constraints": [
+    {
+      "id": "TRAVEL_010_C1",
+      "description": "Interpret 'next week' relative to the current date as the upcoming calendar week for travel date selection.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives a relative time expression that must be grounded to actual dates before booking."
+    },
+    {
+      "id": "TRAVEL_010_C2",
+      "description": "Select a specific departure date within next week because no exact day is provided.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "A concrete flight cannot be booked without choosing one date from the requested week."
+    },
+    {
+      "id": "TRAVEL_010_C3",
+      "description": "Treat 'reasonably priced' as a preference to minimize fare relative to typical economy options on the route and dates.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "Price acceptability is subjective and requires heuristic interpretation during option ranking."
+    },
+    {
+      "id": "TRAVEL_010_C4",
+      "description": "Interpret 'does not involve too many layovers' as a preference for itineraries with fewer stops, ideally nonstop or one stop.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The acceptable number of layovers is not fixed, but fewer connections clearly improves fit to the request."
+    },
+    {
+      "id": "TRAVEL_010_C5",
+      "description": "Assume standard commercial flight booking defaults are needed, such as selecting one available economy itinerary for a single traveler unless otherwise specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Basic booking parameters not stated in the request must default to standard assumptions to make the booking executable."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_005",
+  "constraints": [
+    {
+      "id": "TRAVEL_005_C1",
+      "description": "\"This Friday\" must be grounded to the next calendar date matching Friday relative to the time of request.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The weekday is stated, but the exact date must be inferred to execute the booking."
+    },
+    {
+      "id": "TRAVEL_005_C2",
+      "description": "\"For the full day\" must be translated into concrete pickup and return times spanning the rental provider's applicable day-long rental window.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "A full-day rental requires operational time boundaries, but exact hours vary by provider or convention."
+    },
+    {
+      "id": "TRAVEL_005_C3",
+      "description": "The rental location must be resolved to a specific car rental pickup point or provider facility serving Munich Airport.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Munich airport is stated, but booking requires a concrete service location within the airport rental ecosystem."
+    },
+    {
+      "id": "TRAVEL_005_C4",
+      "description": "Pickup and drop-off are assumed to occur at the same Munich Airport rental location unless otherwise specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Same-location return is a standard default needed for planning when one-way rental is not requested."
+    },
+    {
+      "id": "TRAVEL_005_C5",
+      "description": "A valid rental must satisfy standard car-hire eligibility requirements such as driver licensing and minimum age unless exceptions are specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "These are standard prerequisites for feasibility even though not mentioned in the request."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

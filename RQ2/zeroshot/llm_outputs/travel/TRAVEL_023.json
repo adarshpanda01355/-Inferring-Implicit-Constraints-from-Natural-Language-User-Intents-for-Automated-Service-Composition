@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_023",
+  "constraints": [
+    {
+      "id": "TRAVEL_023_C1",
+      "description": "The departure airport should be selected as the commercially nearest feasible airport serving Ulm.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request names 'the nearest airport of Ulm' but does not operationalize how nearness is measured or which airport qualifies if multiple candidates exist."
+    },
+    {
+      "id": "TRAVEL_023_C2",
+      "description": "The arrival airport should be chosen as an airport that serves Frankfurt and is appropriate for a standard passenger flight booking.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Frankfurt is a city with airport options; booking requires resolving the city to a valid destination airport under normal travel conventions."
+    },
+    {
+      "id": "TRAVEL_023_C3",
+      "description": "The flight should depart on the same calendar day in the evening and as late within that evening period as practical.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "'Late evening' requires interpreting the boundary of evening and optimizing toward later departures within that window."
+    },
+    {
+      "id": "TRAVEL_023_C4",
+      "description": "Among flights satisfying the stated preferences, the booking should prioritize the lowest suitable economy fare.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The adjective 'economy' explicitly specifies cabin class, but service composition typically infers cost-sensitive selection within that class unless otherwise constrained."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

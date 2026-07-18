@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_007",
+  "constraints": [
+    {
+      "id": "TRAVEL_007_C1",
+      "description": "next available train requires selecting the earliest departure after the current time",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The system must ground 'next available' relative to now to identify a valid train."
+    },
+    {
+      "id": "TRAVEL_007_C2",
+      "description": "departure search must be constrained to trains that can still be boarded and booked at query time",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A train that has already departed or is no longer bookable cannot satisfy the request."
+    },
+    {
+      "id": "TRAVEL_007_C3",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for rail booking and defaults to one when unspecified."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

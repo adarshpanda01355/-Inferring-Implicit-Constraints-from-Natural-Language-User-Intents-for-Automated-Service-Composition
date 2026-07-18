@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_023",
+  "constraints": [
+    {
+      "id": "TRAVEL_023_C1",
+      "description": "nearest airport of Ulm requires resolving Ulm's candidate departure airports and selecting the one with minimum practical proximity",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Ulm has no major commercial airport, so planning must infer which surrounding airport counts as nearest; distance can be interpreted by road, rail, or straight-line measures."
+    },
+    {
+      "id": "TRAVEL_023_C2",
+      "description": "evening flight implies a fuzzy departure-time window in the later part of the day",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Critical",
+      "notes": "A booking system needs an operational interpretation of 'evening' to filter flights."
+    },
+    {
+      "id": "TRAVEL_023_C3",
+      "description": "late evening flight implies preference toward the latest suitable departure within the evening window",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "'Late' refines the evening preference but has no universally fixed cutoff."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

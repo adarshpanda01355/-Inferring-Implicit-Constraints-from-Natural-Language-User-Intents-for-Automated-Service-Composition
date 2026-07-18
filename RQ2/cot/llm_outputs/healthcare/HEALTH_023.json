@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_023",
+  "constraints": [
+    {
+      "id": "HEALTH_023_C1",
+      "description": "The child must be within the eligible age range and vaccination schedule context for receiving an MMR dose.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid vaccination booking requires basic clinical eligibility based on standard immunization rules, even though age/schedule details are not stated."
+    },
+    {
+      "id": "HEALTH_023_C2",
+      "description": "A legal guardian or authorized adult must be able to consent to and accompany the child for the vaccination appointment.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Because the patient is a child, pediatric vaccination normally requires guardian presence/consent for service completion."
+    },
+    {
+      "id": "HEALTH_023_C3",
+      "description": "The selected clinic must provide pediatric vaccination services and be able to administer MMR vaccines to children.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Not every clinic can vaccinate children or offer MMR; this must be inferred for feasible service selection."
+    },
+    {
+      "id": "HEALTH_023_C4",
+      "description": "The clinic must have MMR vaccine stock and an appointment slot available within the requested weekend window.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Successful planning depends on simultaneous resource availability: vaccine supply and appointment capacity."
+    },
+    {
+      "id": "HEALTH_023_C5",
+      "description": "\"Later in the afternoon\" should be interpreted as a late-afternoon time band rather than any afternoon slot.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The preference is not precisely bounded and requires approximate interpretation for scheduling."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_011",
+  "constraints": [
+    {
+      "id": "TRAVEL_011_C1",
+      "description": "Interpret 'tomorrow' relative to the request time and map it to the next calendar date at the trip origin context",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Booking requires resolving the relative date reference into a concrete travel date."
+    },
+    {
+      "id": "TRAVEL_011_C2",
+      "description": "Interpret 'early' as a preference for departures in the early part of the day rather than a fixed time",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request gives a fuzzy departure-time preference that helps rank train options."
+    },
+    {
+      "id": "TRAVEL_011_C3",
+      "description": "Assume departure and arrival locations refer to the main train stations serving Hamburg and Copenhagen unless a specific station is later provided",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Train booking normally requires station-level endpoints, and city names are commonly mapped to principal stations by default."
+    },
+    {
+      "id": "TRAVEL_011_C4",
+      "description": "Select a train itinerary that is valid for cross-border rail travel between Germany and Denmark, including any necessary transfers",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The service must consider feasible international rail connections, not only direct trains."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_005",
+  "constraints": [
+    {
+      "id": "HEALTH_005_C1",
+      "description": "The follow-up appointment date must be computed from the surgery date, placing the wound check on the calendar date that is two weeks after 10 June 2026.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives a relative interval, so scheduling requires deriving the exact follow-up date."
+    },
+    {
+      "id": "HEALTH_005_C2",
+      "description": "The wound check must occur after the knee surgery has already taken place.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A post-op check is only valid if ordered after the operation event."
+    },
+    {
+      "id": "HEALTH_005_C3",
+      "description": "The appointment should be booked with a provider capable of performing a postoperative wound assessment for knee surgery recovery.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Service selection requires inferring an appropriate clinical provider type for a post-op wound check."
+    },
+    {
+      "id": "HEALTH_005_C4",
+      "description": "The provider should be located within Hamburg or reasonably accessible as a Hamburg-based appointment.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The city is explicit, but operationalizing whether a provider counts as 'in Hamburg' or sufficiently nearby requires geographic interpretation."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

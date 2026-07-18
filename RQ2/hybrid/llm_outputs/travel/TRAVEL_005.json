@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_005",
+  "constraints": [
+    {
+      "id": "TRAVEL_005_C1",
+      "description": "this Friday must be grounded to the upcoming Friday relative to the request date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Calendar grounding is required to determine the rental date."
+    },
+    {
+      "id": "TRAVEL_005_C2",
+      "description": "full day rental implies a pickup and return span covering the provider's standard full-day rental period on that date",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "A concrete booking needs start and end times, but 'full day' may map to slightly different provider conventions."
+    },
+    {
+      "id": "TRAVEL_005_C3",
+      "description": "pickup location must resolve to a rental car provider serving Munich Airport",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Airport location needs operational resolution to eligible rental counters or pickup points."
+    },
+    {
+      "id": "TRAVEL_005_C4",
+      "description": "1 vehicle requested",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A single rental car is the standard default unless multiple vehicles are specified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

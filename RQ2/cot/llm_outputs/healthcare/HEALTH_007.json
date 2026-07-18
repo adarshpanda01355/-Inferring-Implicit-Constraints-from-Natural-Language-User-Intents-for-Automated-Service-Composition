@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_007",
+  "constraints": [
+    {
+      "id": "HEALTH_007_C1",
+      "description": "The appointment should be with a provider authorized to issue an eye examination certificate accepted for a driving license application in Germany.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated purpose implies the exam result must be valid for the licensing process, which affects provider selection."
+    },
+    {
+      "id": "HEALTH_007_C2",
+      "description": "The service should include documentation or a certificate that can be submitted with the driving license application.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A routine exam alone may not satisfy the application unless the required proof is produced."
+    },
+    {
+      "id": "HEALTH_007_C3",
+      "description": "The appointment should be scheduled early enough to support the driving license application timeline.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "No deadline is given, but the stated purpose implies timing matters relative to the application process."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

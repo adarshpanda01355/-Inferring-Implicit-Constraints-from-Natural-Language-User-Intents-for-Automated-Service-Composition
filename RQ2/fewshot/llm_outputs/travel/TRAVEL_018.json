@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_018",
+  "constraints": [
+    {
+      "id": "TRAVEL_018_C1",
+      "description": "departure airport should be selected from Frankfurt-area airports based on the traveler's residence",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Living in Frankfurt implies origin access should be planned from Frankfurt, but the exact airport choice is not uniquely determined."
+    },
+    {
+      "id": "TRAVEL_018_C2",
+      "description": "by end of week requires grounding to the latest acceptable arrival time within the current calendar week",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The deadline must be converted into a concrete booking window to search valid itineraries."
+    },
+    {
+      "id": "TRAVEL_018_C3",
+      "description": "morning flight preference requires interpreting a fuzzy morning departure time window",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Morning is not universally fixed, but it influences ranking of candidate flights."
+    },
+    {
+      "id": "TRAVEL_018_C4",
+      "description": "itinerary should preserve change or rescheduling flexibility where possible",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The user signals possible later changes, so fare rules and ticket flexibility matter for service selection."
+    },
+    {
+      "id": "TRAVEL_018_C5",
+      "description": "number of passengers defaults to 1 traveler",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for flight search and is normally assumed as one when unspecified."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

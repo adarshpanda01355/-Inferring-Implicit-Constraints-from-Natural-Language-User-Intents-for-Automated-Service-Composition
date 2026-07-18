@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_007",
+  "constraints": [
+    {
+      "id": "HEALTH_007_C1",
+      "description": "The appointment should be with a provider authorized to perform vision testing acceptable for a driving license application.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The exam is needed for a driving license application, so the selected service must satisfy licensing authority requirements, not just any general eye check."
+    },
+    {
+      "id": "HEALTH_007_C2",
+      "description": "The provider should be able to issue the required certificate or documentation for the driving license application.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid application typically requires official proof of the vision test result."
+    },
+    {
+      "id": "HEALTH_007_C3",
+      "description": "The appointment should occur early enough to allow the exam results to be used in the driving license application process.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "No deadline is given, but the exam must precede and support the application."
+    },
+    {
+      "id": "HEALTH_007_C4",
+      "description": "The service should be arranged within practical reach of the requester in Frankfurt.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Frankfurt is specified, but exact neighborhood or travel radius is not stated."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

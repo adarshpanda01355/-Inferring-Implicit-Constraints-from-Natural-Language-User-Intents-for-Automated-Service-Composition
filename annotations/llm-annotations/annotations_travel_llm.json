@@ -1,0 +1,850 @@
+{
+"metadata": {
+"annotator_name": "GPT-5.4 Thinking Mode",
+"annotation_date": "10-01-2026",
+"domain": "travel_booking"
+},
+"annotations": [
+{
+"request_id": "TRAVEL_001",
+"domain": "travel_booking",
+"request": "Book a flight for one adult from Stuttgart to Berlin for tomorrow at 3 PM.",
+"constraints": [
+{
+"id": "TRAVEL_001_C1",
+"description": "Resolve 'tomorrow' to a specific calendar date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative date requires grounding from system date."
+}
+],
+"constraint_count": 1,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_002",
+"domain": "travel_booking",
+"request": "I need a hotel in Bangalore near Manyata Tech Park for next weekend.",
+"constraints": [
+{
+"id": "TRAVEL_002_C1",
+"description": "Resolve 'next weekend' to specific dates.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Weekend must be anchored to a concrete upcoming Saturday-Sunday interval."
+},
+{
+"id": "TRAVEL_002_C2",
+"description": "Ground 'Manyata Tech Park' to its geographic location in Bangalore.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Useful",
+"notes": "Needed to evaluate the proximity condition 'near Manyata Tech Park'."
+},
+{
+"id": "TRAVEL_002_C3",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+},
+{
+"id": "TRAVEL_002_C4",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify room count."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_003",
+"domain": "travel_booking",
+"request": "Find me a cheap flight from Munich to Paris.",
+"constraints": [
+{
+"id": "TRAVEL_003_C1",
+"description": "Optimize for a low airfare.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Cheap’ is a fuzzy price threshold."
+},
+{
+"id": "TRAVEL_003_C2",
+"description": "Assume default number of passengers = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Flight request does not specify passenger count."
+}
+],
+"constraint_count": 2,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_004",
+"domain": "travel_booking",
+"request": "I need accommodation for my semester exchange at Humboldt University starting in April, somewhere with good public transport within student budget.",
+"constraints": [
+{
+"id": "TRAVEL_004_C1",
+"description": "Ground 'Humboldt University' to Berlin for accommodation search.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "University name requires location grounding for travel planning."
+},
+{
+"id": "TRAVEL_004_C2",
+"description": "Resolve 'starting in April' to a concrete start date or start window.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Month reference must be anchored to the calendar."
+},
+{
+"id": "TRAVEL_004_C3",
+"description": "Prefer accommodation with good public transport access.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Good public transport’ is a fuzzy accessibility criterion."
+},
+{
+"id": "TRAVEL_004_C4",
+"description": "Keep accommodation cost within a student budget range.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Student budget’ is subjective and does not define a fixed numeric threshold."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_005",
+"domain": "travel_booking",
+"request": "Book a rental car at Munich airport this Friday for the full day.",
+"constraints": [
+{
+"id": "TRAVEL_005_C1",
+"description": "Ground 'Munich airport' to the specific airport rental location.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Airport location must be resolved to complete pickup booking."
+},
+{
+"id": "TRAVEL_005_C2",
+"description": "Resolve 'this Friday' to a specific calendar date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative weekday requires date grounding."
+},
+{
+"id": "TRAVEL_005_C3",
+"description": "Assume default number of vehicles = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Rental car request does not specify vehicle count."
+}
+],
+"constraint_count": 3,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_006",
+"domain": "travel_booking",
+"request": "I want to visit my parents in Karol Bagh over Christmas, need a hotel cheaper than 30 EUR per night.",
+"constraints": [
+{
+"id": "TRAVEL_006_C1",
+"description": "Ground 'Karol Bagh' to Delhi for hotel search.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Locality name requires city grounding."
+},
+{
+"id": "TRAVEL_006_C2",
+"description": "Interpret 'over Christmas' as a hotel stay during the Christmas holiday period.",
+"category": "Temporal",
+"resolvability": "Borderline",
+"importance": "Critical",
+"notes": "Anchored to Christmas, but exact nights are not uniquely determined."
+},
+{
+"id": "TRAVEL_006_C3",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+},
+{
+"id": "TRAVEL_006_C4",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify room count."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_007",
+"domain": "travel_booking",
+"request": "Get me on the next available train from Stuttgart to Zurich.",
+"constraints": [
+{
+"id": "TRAVEL_007_C1",
+"description": "Select the earliest departing train available after the current time.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "‘Next available’ requires time-based ranking against current system time."
+}
+],
+"constraint_count": 1,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_008",
+"domain": "travel_booking",
+"request": "Find a pet-friendly hotel with a double room for two person on the way from Stuttgart to Amsterdam.",
+"constraints": [
+{
+"id": "TRAVEL_008_C1",
+"description": "Find accommodation located along the route between Stuttgart and Amsterdam.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘On the way’ implies route intersection, but acceptable deviation is not sharply defined."
+}
+],
+"constraint_count": 1,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_009",
+"domain": "travel_booking",
+"request": "Find a hotel for a couple with a cat in Central Munich from 12th of December, 2026 to 14th of December, 2026",
+"constraints": [
+{
+"id": "TRAVEL_009_C1",
+"description": "Interpret 'Central Munich' as accommodation within the city-center area of Munich.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "City-center boundaries are not exact."
+},
+{
+"id": "TRAVEL_009_C2",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Guest count is explicit, but room count is not specified."
+}
+],
+"constraint_count": 2,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_010",
+"domain": "travel_booking",
+"request": "Book me an economy flight from Delhi to Rome sometime next week that is reasonably priced and does not involve too many layovers.",
+"constraints": [
+{
+"id": "TRAVEL_010_C1",
+"description": "Resolve 'next week' to a concrete date window.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative week reference requires calendar grounding."
+},
+{
+"id": "TRAVEL_010_C2",
+"description": "Keep airfare within a reasonably priced range.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Reasonably priced’ is a subjective cost threshold."
+},
+{
+"id": "TRAVEL_010_C3",
+"description": "Prefer itineraries with a small number of layovers.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Too many layovers’ does not define a fixed maximum."
+},
+{
+"id": "TRAVEL_010_C4",
+"description": "Assume default number of passengers = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Flight request does not specify passenger count."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_011",
+"domain": "travel_booking",
+"request": "Book a train from Hamburg to Copenhagen leaving early tomorrow.",
+"constraints": [
+{
+"id": "TRAVEL_011_C1",
+"description": "Resolve 'tomorrow' to a specific departure date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative date requires grounding."
+},
+{
+"id": "TRAVEL_011_C2",
+"description": "Interpret 'early' as an early-day departure time window.",
+"category": "Temporal",
+"resolvability": "Borderline",
+"importance": "Useful",
+"notes": "A conventional range may exist, but user interpretations vary."
+},
+{
+"id": "TRAVEL_011_C3",
+"description": "Assume a default train class/fare category.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Concrete ticket booking usually requires a class/fare selection."
+}
+],
+"constraint_count": 3,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_012",
+"domain": "travel_booking",
+"request": "I'm attending a wedding in Jaipur for three nights on the first Friday of next month, need a place walking distance from Kasturi Bagh.",
+"constraints": [
+{
+"id": "TRAVEL_012_C1",
+"description": "Resolve 'the first Friday of next month' to a specific date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Compound relative date expression requires calendar computation."
+},
+{
+"id": "TRAVEL_012_C2",
+"description": "Ground 'Kasturi Bagh' to its location in Jaipur.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Local place name requires geographic grounding."
+},
+{
+"id": "TRAVEL_012_C3",
+"description": "Prefer accommodation within walking distance of Kasturi Bagh.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "Walking distance has no single fixed threshold."
+}
+],
+"constraint_count": 3,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_013",
+"domain": "travel_booking",
+"request": "Find the cheapest flight from Split to London this week.",
+"constraints": [
+{
+"id": "TRAVEL_013_C1",
+"description": "Optimize for the minimum available airfare.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "Cheapest is an optimization goal over candidate flights."
+},
+{
+"id": "TRAVEL_013_C2",
+"description": "Resolve 'this week' to the current week date window.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Current week must be anchored from system date."
+},
+{
+"id": "TRAVEL_013_C3",
+"description": "Assume default number of passengers = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Flight request does not specify passenger count."
+}
+],
+"constraint_count": 3,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_014",
+"domain": "travel_booking",
+"request": "Find a hotel for tonight. I have a layover at FRA airport, and having something to eat at the hotel would be great.",
+"constraints": [
+{
+"id": "TRAVEL_014_C1",
+"description": "Resolve 'tonight' to the current-night stay date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative stay timing requires grounding."
+},
+{
+"id": "TRAVEL_014_C2",
+"description": "Ground 'FRA airport' to Frankfurt Airport.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Airport code needs location resolution."
+},
+{
+"id": "TRAVEL_014_C3",
+"description": "Prefer a hotel convenient to Frankfurt Airport because of the layover.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Useful",
+"notes": "Airport proximity is implied by the layover context even though not directly stated."
+},
+{
+"id": "TRAVEL_014_C4",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+},
+{
+"id": "TRAVEL_014_C5",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify room count."
+}
+],
+"constraint_count": 5,
+"density": "High"
+},
+{
+"request_id": "TRAVEL_015",
+"domain": "travel_booking",
+"request": "Book a bus for me from Delhi to Agra leaving after my 12 PM meeting on 4th of May.",
+"constraints": [
+{
+"id": "TRAVEL_015_C1",
+"description": "Resolve '4th of May' to the intended calendar year/date instance.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "The date lacks a year and must be grounded to a specific occurrence."
+},
+{
+"id": "TRAVEL_015_C2",
+"description": "Schedule departure after the meeting time anchor.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "The bus must depart after the referenced 12 PM meeting."
+}
+],
+"constraint_count": 2,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_016",
+"domain": "travel_booking",
+"request": "Find me a good hotel in Copenhagen within 5 kms from station which serves vegetarian meals April 15th onwards. If the per night cost is less than 30 euros per room book it for 3 nights, else book for 2 nights.",
+"constraints": [
+{
+"id": "TRAVEL_016_C1",
+"description": "Interpret 'good hotel' as a higher-quality hotel option.",
+"category": "Domain-default",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "Per guideline consistency, quality expressions like ‘good hotel’ are subjective."
+},
+{
+"id": "TRAVEL_016_C2",
+"description": "Resolve 'station' to the relevant default station in Copenhagen.",
+"category": "Spatial",
+"resolvability": "Borderline",
+"importance": "Critical",
+"notes": "The request does not specify which station; likely central station, but interpretation may vary."
+},
+{
+"id": "TRAVEL_016_C3",
+"description": "Resolve 'April 15th onwards' to a specific year/date start anchor.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Month-day reference lacks a year and requires grounding."
+},
+{
+"id": "TRAVEL_016_C4",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+},
+{
+"id": "TRAVEL_016_C5",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify room count."
+}
+],
+"constraint_count": 5,
+"density": "High"
+},
+{
+"request_id": "TRAVEL_017",
+"domain": "travel_booking",
+"request": "I want one single hotel room within 1km walk of Rijksmuseum for one night starting January 12, 2026 with a good view.",
+"constraints": [
+{
+"id": "TRAVEL_017_C1",
+"description": "Ground 'Rijksmuseum' to Amsterdam.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Landmark grounding is needed for proximity filtering."
+},
+{
+"id": "TRAVEL_017_C2",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Room count is explicit, but guest count is not specified."
+}
+],
+"constraint_count": 2,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_018",
+"domain": "travel_booking",
+"request": "I live in Frankfurt. Get me to Bangalore by end of week, preferably morning flight. I may need to reschedule.",
+"constraints": [
+{
+"id": "TRAVEL_018_C1",
+"description": "Use Frankfurt as the departure origin context.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Origin is inferred from the user's stated location."
+},
+{
+"id": "TRAVEL_018_C2",
+"description": "Resolve 'by end of week' to a latest acceptable arrival/departure deadline.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative deadline requires anchoring to the current week."
+},
+{
+"id": "TRAVEL_018_C3",
+"description": "Prefer a morning departure time window.",
+"category": "Temporal",
+"resolvability": "Borderline",
+"importance": "Useful",
+"notes": "Morning has a conventional but not universal range."
+},
+{
+"id": "TRAVEL_018_C4",
+"description": "Prefer a fare or ticket type that allows rescheduling.",
+"category": "Logical",
+"resolvability": "Implicit",
+"importance": "Useful",
+"notes": "Need for rescheduling maps to flexible change policy rather than a directly stated booking parameter."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_019",
+"domain": "travel_booking",
+"request": "Book a hotel near Stuttgart Porsche Museum for my family of 4 visiting from next Friday to Sunday. I don't want to use a separate public garage for parking my car.",
+"constraints": [
+{
+"id": "TRAVEL_019_C1",
+"description": "Ground 'Porsche Museum' to its location in Stuttgart.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Landmark grounding is needed for hotel search."
+},
+{
+"id": "TRAVEL_019_C2",
+"description": "Interpret 'near Stuttgart Porsche Museum' as a proximity preference around the museum.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Near’ has no fixed distance threshold."
+},
+{
+"id": "TRAVEL_019_C3",
+"description": "Resolve 'next Friday' to a concrete check-in date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative weekday requires calendar grounding."
+},
+{
+"id": "TRAVEL_019_C4",
+"description": "Prefer hotel parking that is on-site rather than requiring a separate public garage.",
+"category": "Logical",
+"resolvability": "Implicit",
+"importance": "Useful",
+"notes": "This is an inferred service-property requirement about parking arrangement."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_020",
+"domain": "travel_booking",
+"request": "Find the cheapest train ticket from Munich to Berlin only on Mondays and Tuesdays if possible within the next 2 weeks.",
+"constraints": [
+{
+"id": "TRAVEL_020_C1",
+"description": "Optimize for the lowest train fare.",
+"category": "Logical",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "Cheapest is an optimization objective over available tickets."
+},
+{
+"id": "TRAVEL_020_C2",
+"description": "Resolve 'within the next 2 weeks' to a concrete search window.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative horizon must be anchored to current date."
+},
+{
+"id": "TRAVEL_020_C3",
+"description": "Restrict candidate departures to Mondays and Tuesdays inside that window when feasible.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Useful",
+"notes": "Weekday filter requires deriving actual calendar dates within the 2-week interval."
+}
+],
+"constraint_count": 3,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_021",
+"domain": "travel_booking",
+"request": "Need a place to crash after Barca vs Real Madrid football game in Camp Nou tonight, something basic is fine.",
+"constraints": [
+{
+"id": "TRAVEL_021_C1",
+"description": "Ground 'Camp Nou' to Barcelona.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Stadium name requires city grounding for lodging search."
+},
+{
+"id": "TRAVEL_021_C2",
+"description": "Resolve 'tonight' to the current-night stay date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative time expression requires grounding."
+},
+{
+"id": "TRAVEL_021_C3",
+"description": "Plan the stay/check-in to occur after the football match ends.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "The arrival timing is anchored to the event completion."
+},
+{
+"id": "TRAVEL_021_C4",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+},
+{
+"id": "TRAVEL_021_C5",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify room count."
+}
+],
+"constraint_count": 5,
+"density": "High"
+},
+{
+"request_id": "TRAVEL_022",
+"domain": "travel_booking",
+"request": "Book a hotel with a business suite in Geneva close to UN headquarters, arriving Sunday afternoon.",
+"constraints": [
+{
+"id": "TRAVEL_022_C1",
+"description": "Ground 'UN headquarters' to the UN location in Geneva.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Landmark grounding is needed for hotel proximity search."
+},
+{
+"id": "TRAVEL_022_C2",
+"description": "Interpret 'close to UN headquarters' as a proximity preference around that landmark.",
+"category": "Spatial",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Close’ does not specify a sharp distance threshold."
+},
+{
+"id": "TRAVEL_022_C3",
+"description": "Resolve 'Sunday' to a specific arrival/check-in date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Weekday reference requires date grounding."
+},
+{
+"id": "TRAVEL_022_C4",
+"description": "Interpret 'afternoon' as an approximate arrival time window.",
+"category": "Temporal",
+"resolvability": "Borderline",
+"importance": "Useful",
+"notes": "Afternoon has an approximate but not universally fixed range."
+},
+{
+"id": "TRAVEL_022_C5",
+"description": "Assume default number of guests = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Hotel request does not specify guest count."
+}
+],
+"constraint_count": 5,
+"density": "High"
+},
+{
+"request_id": "TRAVEL_023",
+"domain": "travel_booking",
+"request": "Get a late economy class evening flight for one adult from the nearest airport of Ulm to Frankfurt.",
+"constraints": [
+{
+"id": "TRAVEL_023_C1",
+"description": "Resolve the nearest usable departure airport for Ulm.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Nearest-airport grounding is required because Ulm itself is not the explicit airport."
+},
+{
+"id": "TRAVEL_023_C2",
+"description": "Interpret 'late evening' as an approximate departure time window.",
+"category": "Temporal",
+"resolvability": "Borderline",
+"importance": "Useful",
+"notes": "Late evening has a conventional but not strict cutoff."
+}
+],
+"constraint_count": 2,
+"density": "Low"
+},
+{
+"request_id": "TRAVEL_024",
+"domain": "travel_booking",
+"request": "I'm going to Global AI summit in the capital of India for 3 days starting next Monday, need a decent hotel and affordable flights for one person.",
+"constraints": [
+{
+"id": "TRAVEL_024_C1",
+"description": "Ground 'the capital of India' to Delhi as the destination context.",
+"category": "Spatial",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Destination city for hotel and flight planning is inferred from the location description."
+},
+{
+"id": "TRAVEL_024_C2",
+"description": "Resolve 'next Monday' to a concrete start date.",
+"category": "Temporal",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Relative weekday requires calendar grounding."
+},
+{
+"id": "TRAVEL_024_C3",
+"description": "Interpret 'decent hotel' as a moderate-quality accommodation preference.",
+"category": "Domain-default",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "Quality term is subjective and similar to ‘good hotel’."
+},
+{
+"id": "TRAVEL_024_C4",
+"description": "Assume default number of rooms = 1.",
+"category": "Domain-default",
+"resolvability": "Implicit",
+"importance": "Critical",
+"notes": "Guest count is explicit, but room count is not specified."
+}
+],
+"constraint_count": 4,
+"density": "Medium"
+},
+{
+"request_id": "TRAVEL_025",
+"domain": "travel_booking",
+"request": "Find a bus from Stuttgart to Prague leaving soon.",
+"constraints": [
+{
+"id": "TRAVEL_025_C1",
+"description": "Prefer a departure in the near future.",
+"category": "Temporal",
+"resolvability": "Vague",
+"importance": "Useful",
+"notes": "‘Soon’ is a fuzzy immediacy preference without a fixed threshold."
+}
+],
+"constraint_count": 1,
+"density": "Low"
+}
+]
+}

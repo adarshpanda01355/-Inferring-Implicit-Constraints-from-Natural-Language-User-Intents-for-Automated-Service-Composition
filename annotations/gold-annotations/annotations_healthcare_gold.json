@@ -1,0 +1,915 @@
+{
+    "metadata": {
+        "annotator_name": "Adarsh",
+        "annotation_date": "19-02-2026",
+        "domain": "healthcare_booking",
+        "annotation_round": "Round 1 after calculating IAA"
+    },
+    "annotations": [
+        {
+            "request_id": "HEALTH_001",
+            "domain": "healthcare_booking",
+            "request": "Book a tooth extraction near Feuersee next Tuesday.",
+            "constraints": [
+                {
+                    "id": "HEALTH_001_C1",
+                    "description": "next Tuesday resolved to the upcoming Tuesday on the calendar",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The appointment date is needed for booking, without it no slot can be reserved."
+                },
+                {
+                    "id": "HEALTH_001_C2",
+                    "description": "near Feuersee implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near' is subjective and just affects convenience, the extraction can happen at any reachable clinic."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_002",
+            "domain": "healthcare_booking",
+            "request": "Schedule a fasting blood glucose test at a lab in Berlin tomorrow early in the morning.",
+            "constraints": [
+                {
+                    "id": "HEALTH_002_C1",
+                    "description": "tomorrow = CurrentDate+1",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A concrete date is needed to find available lab slots."
+                },
+                {
+                    "id": "HEALTH_002_C2",
+                    "description": "early morning corresponds to a conventional but non-universal clinical time window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Fasting tests are usually scheduled early, but the exact hours differ across labs. Missing this just makes scheduling less ideal, not impossible."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_003",
+            "domain": "healthcare_booking",
+            "request": "Arrange an MRI of the lumbar spine in Munich after my consultation at 10:00 on next Monday.",
+            "constraints": [
+                {
+                    "id": "HEALTH_003_C1",
+                    "description": "next Monday resolved to the upcoming Monday on the calendar",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed, without it no appointment can be placed."
+                },
+                {
+                    "id": "HEALTH_003_C2",
+                    "description": "MRI must occur after the consultation event",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Breaking the order makes the workflow medically wrong since the MRI results are needed after the consultation."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_004",
+            "domain": "healthcare_booking",
+            "request": "Book an MMR vaccination for my child at a pediatric clinic in Stuttgart on the first working day after 1 May 2026 near the city center.",
+            "constraints": [
+                {
+                    "id": "HEALTH_004_C1",
+                    "description": "Resolve 'the first working day after 1 May 2026' to the next non-holiday weekday.",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The date must account for public holidays, wrong grounding means booking on a day the clinic is closed."
+                },
+                {
+                    "id": "HEALTH_004_C2",
+                    "description": "near city center implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near city center' is just a convenience preference, the vaccination can be done at any eligible clinic."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_005",
+            "domain": "healthcare_booking",
+            "request": "Schedule a post-op wound check in Hamburg two weeks after my knee surgery on 10 June 2026.",
+            "constraints": [
+                {
+                    "id": "HEALTH_005_C1",
+                    "description": "follow-up date derived as surgery date + 14 days",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Post-op timing is medically prescribed, getting the date wrong can compromise patient safety."
+                },
+                {
+                    "id": "HEALTH_005_C2",
+                    "description": "wound check must occur after the surgical procedure",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "This ordering is a medical necessity, a wound check before surgery makes no sense."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_006",
+            "domain": "healthcare_booking",
+            "request": "Book a physiotherapy session in Cologne on following Tuesday. I use a wheelchair and can't manage stairs easily",
+            "constraints": [
+                {
+                    "id": "HEALTH_006_C1",
+                    "description": "provider must support wheelchair-accessible facilities",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Without wheelchair access the user simply cannot get to the session, so the plan fails."
+                },
+                {
+                    "id": "HEALTH_006_C2",
+                    "description": "following Tuesday resolved to the upcoming Tuesday on the calendar",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed for booking."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_007",
+            "domain": "healthcare_booking",
+            "request": "Arrange a routine eye exam in Frankfurt on 19th August, 2026. I have a driver's license examination and need a document concerning my vision from the same visit.",
+            "constraints": [
+                {
+                    "id": "HEALTH_007_C1",
+                    "description": "provider must support both eye examination and vision certification within the same facility",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The user needs both services at the same place, a provider that cannot issue the certificate fails the request."
+                },
+                {
+                    "id": "HEALTH_007_C2",
+                    "description": "certificate must be officially valid for driver's license application", 
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Vision certificate must conform to driver's license authority standards (FEV-standard/equivalent). Provider must map exam results to legally required certificate format, not generic vision report."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_008",
+            "domain": "healthcare_booking",
+            "request": "Schedule a cardiology consultation in Berlin on the same day as my stress test on 12 May 2026.",
+            "constraints": [
+                {
+                    "id": "HEALTH_008_C1",
+                    "description": "consultation date must align with 12 May 2026",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A fixed date is needed to make the same-day setup work."
+                },
+                {
+                    "id": "HEALTH_008_C2",
+                    "description": "consultation and stress test must be coordinated within the same day",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Same-day coordination is the main point of the request, breaking it makes the plan useless."
+                }
+            ],
+            "constraint_count": 2,
+            "density": "Low"
+        },
+        {
+            "request_id": "HEALTH_009",
+            "domain": "healthcare_booking",
+            "request": "Book a pediatric consultation near Stuttgart Hauptbahnhof this Friday evening for my son's cough.",
+            "constraints": [
+                {
+                    "id": "HEALTH_009_C1",
+                    "description": "near Stuttgart Hauptbahnhof implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near' is subjective and just a proximity preference, the consultation can happen at any pediatric provider."
+                },
+                {
+                    "id": "HEALTH_009_C2",
+                    "description": "this Friday resolved to the nearest upcoming Friday",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed to find available slots."
+                },
+                {
+                    "id": "HEALTH_009_C3",
+                    "description": "evening corresponds to a business-hours-adjacent appointment window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Time-of-day preference that affects scheduling quality but the consultation can still happen at other times."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_010",
+            "domain": "healthcare_booking",
+            "request": "Find a hospital in Stuttgart starting next week for an elbow injury after a fall. I might need imaging during the same visit, and I'd rather avoid unexpected out-of-pocket costs.",
+            "constraints": [
+                {
+                    "id": "HEALTH_010_C1",
+                    "description": "next week resolved to upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_010_C2",
+                    "description": "provider must support both consultation and imaging services within the same facility",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "'Might need' shows this is conditional, the consultation itself is not blocked if imaging is not on-site."
+                },
+                {
+                    "id": "HEALTH_010_C3",
+                    "description": "insurance coverage must apply across all required services",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "'I'd rather avoid' is preference language, treatment can go ahead without insurance pre-check but the user might not be happy."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_011",
+            "domain": "healthcare_booking",
+            "request": "Schedule an orthopedic consultation in Berlin next week at a clinic where I can also get an MRI done later if needed, and it should be easy to reach from Alexanderplatz.",
+            "constraints": [
+                {
+                    "id": "HEALTH_011_C1",
+                    "description": "next week resolved to the upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_011_C2",
+                    "description": "provider must support both orthopedic consultation and MRI services within the same facility",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "'If needed' makes this conditional, the consultation can still happen without MRI on-site."
+                },
+                {
+                    "id": "HEALTH_011_C3",
+                    "description": "Alexanderplatz requires grounding to the relevant city",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Location grounding is needed so the system knows where to filter providers around."
+                },
+                {
+                    "id": "HEALTH_011_C4",
+                    "description": "easy to reach from Alexanderplatz implies fuzzy accessibility/proximity constraint",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Easy to reach' is subjective and just affects convenience, not whether the booking can happen."
+                }
+            ],
+            "constraint_count": 4,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_012",
+            "domain": "healthcare_booking",
+            "request": "Arrange a neurology consultation in Stuttgart next Thursday somewhere between Stuttgart Hauptbahnhof and Universitat Stuttgart within a reasonable budget if possible.",
+            "constraints": [
+                {
+                    "id": "HEALTH_012_C1",
+                    "description": "next Thursday resolved to the upcoming Thursday on the calendar",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed for booking."
+                },
+                {
+                    "id": "HEALTH_012_C2",
+                    "description": "provider location should lie along the route between Stuttgart Hauptbahnhof and Universitat Stuttgart",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Route-based location preference just affects convenience, any neurology provider in Stuttgart still works."
+                },
+                {
+                    "id": "HEALTH_012_C3",
+                    "description": "reasonable budget implies fuzzy budget constraint",
+                    "category": "Logical",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Reasonable budget' combined with 'if possible' is a soft cost preference. Ignoring it might upset the user but the consultation can still happen."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_013",
+            "domain": "healthcare_booking",
+            "request": "Book a dermatology consultation in Munich next week. I'd prefer a standard covered appointment, but if waiting times are too long I may be open to paying more for an earlier visit.",
+            "constraints": [
+                {
+                    "id": "HEALTH_013_C1",
+                    "description": "next week resolved to the upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_013_C2",
+                    "description": "provider must support both public insurance coverage and optional private consultation pathways",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Having both pathways improves flexibility but a provider with only one pathway can still handle the consultation."
+                },
+                {
+                    "id": "HEALTH_013_C3",
+                    "description": "service configuration must allow switching between public and private pathways without conflict",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Being able to switch pathways is a nice-to-have that gives more appointment options but is not needed for the booking to work."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_014",
+            "domain": "healthcare_booking",
+            "request": "Book a psychiatry consultation in Cologne next week in the evening. If this turns into ongoing treatment, I'd rather not start over with someone new.",
+            "constraints": [
+                {
+                    "id": "HEALTH_014_C1",
+                    "description": "next week resolved to the upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_014_C2",
+                    "description": "evening corresponds to a conventional but non-universal time window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Evening preference affects scheduling but the consultation can still happen at other times."
+                },
+                {
+                    "id": "HEALTH_014_C3",
+                    "description": "provider identity should remain consistent across initial consultation and potential follow-up",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Continuity of care is a quality preference and only kicks in conditionally ('if this turns into'). The first consultation is not blocked without it."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_015",
+            "domain": "healthcare_booking",
+            "request": "Find an orthopedic consultation in Hamburg next week near Altona station. I'd like to get seen without waiting for extra paperwork first.",
+            "constraints": [
+                {
+                    "id": "HEALTH_015_C1",
+                    "description": "next week resolved to the upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_015_C2",
+                    "description": "near Altona station implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near' is subjective and just a convenience preference."
+                },
+                {
+                    "id": "HEALTH_015_C3",
+                    "description": "provider must allow direct booking without a prior referral",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "If the provider needs a referral and the user does not have one, the appointment simply cannot happen."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_016",
+            "domain": "healthcare_booking",
+            "request": "Schedule a physiotherapy session in Frankfurt next week. I would like to get the earliest possible appointment even if it means paying privately.",
+            "constraints": [
+                {
+                    "id": "HEALTH_016_C1",
+                    "description": "next week resolved to the upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "A time window is needed for scheduling."
+                },
+                {
+                    "id": "HEALTH_016_C2",
+                    "description": "appointment selection should prioritize earliest available slot",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This is an optimization preference, any valid slot within the window still works for the booking."
+                },
+                {
+                    "id": "HEALTH_016_C3",
+                    "description": "request implies willingness to use private/self-pay pathway to access earlier availability",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Being open to paying privately can unlock more slots, but the session can still be booked through normal channels."
+                }
+            ],
+            "constraint_count": 3,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_017",
+            "domain": "healthcare_booking",
+            "request": "I got a deep cut on my hand and need a clinic as soon as possible, preferably in Schwabstrasse, but if not then wherever I can get an appointment at this hour.",
+            "constraints": [
+                {
+                    "id": "HEALTH_017_C1",
+                    "description": "as soon as possible implies earliest feasible appointment selection",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Urgency is the main point here, waiting too long with a deep cut is a medical risk."
+                },
+                {
+                    "id": "HEALTH_017_C2",
+                    "description": "Schwabstrasse requires grounding to the relevant Stuttgart location",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Preferred location but the user openly relaxes it ('if not then wherever'), so it only affects convenience."
+                },
+                {
+                    "id": "HEALTH_017_C3",
+                    "description": "preferred location constraint may be relaxed in favor of any provider with immediate availability",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This is the fallback rule that says urgency wins over location preference when needed."
+                },
+                {
+                    "id": "HEALTH_017_C4",
+                    "description": "deep cut on hand implies urgent-care treatment context rather than routine consultation scheduling",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Sending the user to a routine outpatient clinic instead of urgent care means they might not get treated in time, which is a plan failure."
+                }
+            ],
+            "constraint_count": 4,
+            "density": "Medium"
+        },
+        {
+            "request_id": "HEALTH_018",
+            "domain": "healthcare_booking",
+            "request": "Book an abdominal ultrasound in Berlin next Wednesday afternoon before my gastroenterology follow-up on 4 June 2026. I would prefer a clinic near Alexanderplatz, but if needed I can go elsewhere to get an earlier slot.",
+            "constraints": [
+                {
+                    "id": "HEALTH_018_C1",
+                    "description": "next Wednesday resolved to the upcoming Wednesday",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed to find available slots."
+                },
+                {
+                    "id": "HEALTH_018_C2",
+                    "description": "afternoon corresponds to a conventional but non-universal clinical time window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Time-of-day preference, the ultrasound can still be done at other times."
+                },
+                {
+                    "id": "HEALTH_018_C3",
+                    "description": "ultrasound must occur before the gastroenterology follow-up",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The ordering matters medically because the follow-up needs the ultrasound results."
+                },
+                {
+                    "id": "HEALTH_018_C4",
+                    "description": "Alexanderplatz requires grounding to the relevant Berlin location",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Preferred location but the user openly relaxes it ('if needed I can go elsewhere')."
+                },
+                {
+                    "id": "HEALTH_018_C5",
+                    "description": "preferred location constraint may be relaxed in favor of earlier availability",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This is the fallback rule that trades off location preference for getting an earlier slot."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_019",
+            "domain": "healthcare_booking",
+            "request": "Arrange an orthopedic consultation somewhere in central Munich sometime early next week after my X-ray, and I would also like to schedule physiotherapy soon after the consultation if needed.",
+            "constraints": [
+                {
+                    "id": "HEALTH_019_C1",
+                    "description": "early next week requires grounding to a fuzzy interval within the upcoming week",
+                    "category": "Temporal",
+                    "resolvability": "Vague",
+                    "importance": "Critical",
+                    "notes": "Even though the exact days are fuzzy, some time window is still needed to place an appointment at all."
+                },
+                {
+                    "id": "HEALTH_019_C2",
+                    "description": "consultation must occur after the X-ray event",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The ordering matters medically because the consultation needs the X-ray results for diagnosis."
+                },
+                {
+                    "id": "HEALTH_019_C3",
+                    "description": "physiotherapy must occur after the consultation event if required",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This ordering only matters if physiotherapy actually gets triggered, so it refines the plan but does not decide whether booking works."
+                },
+                {
+                    "id": "HEALTH_019_C4",
+                    "description": "conditional scheduling of physiotherapy based on consultation outcome",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "The conditionality is a planning detail, the main consultation is not blocked by it."
+                },
+                {
+                    "id": "HEALTH_019_C5",
+                    "description": "somewhere central implies vague city-center proximity",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Somewhere central' is a fuzzy location preference that just affects convenience."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_020",
+            "domain": "healthcare_booking",
+            "request": "Find me a therapist around Feuersee. I'd like to start gently and see how it goes before committing to regular weekly sessions. My schedule changes a lot, and some weeks getting there in person may be difficult",
+            "constraints": [
+                {
+                    "id": "HEALTH_020_C1",
+                    "description": "around Feuersee implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Around' is subjective and just a convenience preference."
+                },
+                {
+                    "id": "HEALTH_020_C2",
+                    "description": "initial therapy engagement should support a low-commitment first step before regular continuation",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This is about how the user wants to ease into therapy, but any initial consultation still gets the job done."
+                },
+                {
+                    "id": "HEALTH_020_C3",
+                    "description": "regular weekly continuation implies continuity with the same therapist",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Keeping the same therapist is a standard quality expectation in ongoing therapy, losing it hurts care quality."
+                },
+                {
+                    "id": "HEALTH_020_C4",
+                    "description": "therapy service should support both in-person and virtual session options",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Having both options helps with the user's scheduling problems, but the initial booking can still happen without it."
+                },
+                {
+                    "id": "HEALTH_020_C5",
+                    "description": "service should allow appointment rescheduling when availability changes",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Rescheduling flexibility is something the user clearly cares about, but not having it does not break the booking."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_021",
+            "domain": "healthcare_booking",
+            "request": "Book an ENT consultation in Hamburg next Thursday. I need to fit it around a hearing test on the same day, and it should be somewhere between Altona station and the university hospital. I'd like to get seen without waiting for extra paperwork first.",
+            "constraints": [
+                {
+                    "id": "HEALTH_021_C1",
+                    "description": "next Thursday resolved to the upcoming Thursday on the calendar",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed for booking."
+                },
+                {
+                    "id": "HEALTH_021_C2",
+                    "description": "ENT consultation and hearing test must be coordinated within the same day",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Same-day coordination is what the user explicitly asked for, breaking it makes the plan useless."
+                },
+                {
+                    "id": "HEALTH_021_C3",
+                    "description": "provider must allow direct booking without a prior referral",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "If a referral is needed but not available, the booking simply cannot go through."
+                },
+                {
+                    "id": "HEALTH_021_C4",
+                    "description": "provider location should lie along the route / between Altona station and the university hospital",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Route-based location preference helps with travel for same-day coordination but does not block the appointment."
+                },
+                {
+                    "id": "HEALTH_021_C5",
+                    "description": "provider should support both ENT consultation and hearing testing within the same care setting to make same-day coordination feasible",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Co-located services are needed to make same-day coordination actually work, without this the main requirement fails."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_022",
+            "domain": "healthcare_booking",
+            "request": "My friend met with an accident near Bad Cannstatt S-Bahn station. I think he has a dislocated knee. Book an ambulance for treatment wherever there is availability. He is insured with TK.",
+            "constraints": [
+                {
+                    "id": "HEALTH_022_C1",
+                    "description": "Bad Cannstatt S-Bahn station requires grounding to an exact pickup location",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The ambulance needs a precise pickup location, without it the service cannot happen."
+                },
+                {
+                    "id": "HEALTH_022_C2",
+                    "description": "ambulance request implies immediate dispatch in the current time window",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "This is an emergency so immediate response is needed, any delay puts the patient at risk."
+                },
+                {
+                    "id": "HEALTH_022_C3",
+                    "description": "accident with suspected dislocation implies emergency-care routing rather than routine outpatient scheduling",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Sending the patient to routine care instead of emergency services is a safety failure."
+                },
+                {
+                    "id": "HEALTH_022_C4",
+                    "description": "ambulance selection should prioritize earliest available unit",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "In an emergency the fastest available ambulance is what matters for patient safety."
+                },
+                {
+                    "id": "HEALTH_022_C5",
+                    "description": "service should be compatible with the patient's insurance coverage for emergency care",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Not matching insurance is a financial problem, not a safety one. Explicit TK mention implies ambulance dispatch must use TK-compatible providers. Some emergency services have GKV restrictions even in emergencies; wrong routing = financial/operational failure."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_023",
+            "domain": "healthcare_booking",
+            "request": "My child needs an MMR vaccination in Berlin during the first weekend of next month, preferably later in the afternoon, at a clinic in the Charlottenburg district. We are covered by public insurance.",
+            "constraints": [
+                {
+                    "id": "HEALTH_023_C1",
+                    "description": "first weekend of next month requires calendar grounding to the first Saturday-Sunday interval of the upcoming month",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed to find available slots."
+                },
+                {
+                    "id": "HEALTH_023_C2",
+                    "description": "later in the afternoon corresponds to a non-universal but conventional clinical time window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Time-of-day preference with 'preferably', the vaccination can still happen at other times."
+                },
+                {
+                    "id": "HEALTH_023_C3",
+                    "description": "Charlottenburg district requires grounding to a defined administrative region in Berlin",
+                    "category": "Spatial",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The district name needs to be mapped to an actual area boundary so providers can be filtered correctly."
+                },
+                {
+                    "id": "HEALTH_023_C4",
+                    "description": "MMR vaccination requires age / immunization-schedule eligibility verification before administration",
+                    "category": "Domain-default",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "This is a medical safety requirement, giving a vaccine without checking eligibility first is unsafe."
+                },
+                {
+                    "id": "HEALTH_023_C5",
+                    "description": "service should be compatible with public insurance coverage for vaccination administration",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "Explicit public insurance mention requires Charlottenburg clinics to accept GKV for MMR vaccination. Some clinics reject GKV for specific services/procedures even if they accept it generally.."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_024",
+            "domain": "healthcare_booking",
+            "request": "Schedule a post-surgery physiotherapy review in Frankfurt two weeks after my ACL reconstruction on 3 September 2026, preferably late in the afternoon, somewhere near the main station and easy to reach from the airport, and before my return-to-work assessment on 1 October 2026.",
+            "constraints": [
+                {
+                    "id": "HEALTH_024_C1",
+                    "description": "review date derived as surgery date + 14 days",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Post-op review timing is medically prescribed, getting the date wrong goes against clinical protocol."
+                },
+                {
+                    "id": "HEALTH_024_C2",
+                    "description": "late afternoon corresponds to a non-universal but conventional time window",
+                    "category": "Temporal",
+                    "resolvability": "Borderline",
+                    "importance": "Useful",
+                    "notes": "Time-of-day preference with 'preferably', the review can still happen at other times."
+                },
+                {
+                    "id": "HEALTH_024_C3",
+                    "description": "near Frankfurt main station implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near' is subjective and just a convenience preference."
+                },
+                {
+                    "id": "HEALTH_024_C4",
+                    "description": "easy to reach from the airport implies accessibility/proximity constraint relative to Frankfurt Airport",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Easy to reach' is fuzzy and just affects convenience, not whether the booking can happen."
+                },
+                {
+                    "id": "HEALTH_024_C5",
+                    "description": "physiotherapy review must occur before the return-to-work assessment",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "The ordering matters because the return-to-work assessment needs the physio review results."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        },
+        {
+            "request_id": "HEALTH_025",
+            "domain": "healthcare_booking",
+            "request": "Book a specialist eye exam in Hamburg for the week after next near Altona station. I need it coordinated with a vision certificate on the same day. I'd prefer the regular covered route unless paying extra is the only way to get a faster slot",
+            "constraints": [
+                {
+                    "id": "HEALTH_025_C1",
+                    "description": "week after next requires calendar grounding to the second upcoming Monday-Sunday interval",
+                    "category": "Temporal",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Date grounding is needed to find available slots."
+                },
+                {
+                    "id": "HEALTH_025_C2",
+                    "description": "near Altona station implies fuzzy proximity threshold",
+                    "category": "Spatial",
+                    "resolvability": "Vague",
+                    "importance": "Useful",
+                    "notes": "'Near' is subjective and just a convenience preference."
+                },
+                {
+                    "id": "HEALTH_025_C3",
+                    "description": "eye exam and vision certificate must be coordinated within the same day",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Same-day coordination is what the user explicitly asked for, breaking it makes the plan useless."
+                },
+                {
+                    "id": "HEALTH_025_C4",
+                    "description": "provider must support both specialist eye examination and vision certification within the same facility",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Critical",
+                    "notes": "Both services need to be at the same place to make same-day coordination actually work."
+                },
+                {
+                    "id": "HEALTH_025_C5",
+                    "description": "service configuration must allow switching between public insurance and private appointment pathways without conflict",
+                    "category": "Logical",
+                    "resolvability": "Implicit",
+                    "importance": "Useful",
+                    "notes": "This is a conditional preference ('unless paying extra is the only way'), it affects what appointment options are available but not whether the booking can happen."
+                }
+            ],
+            "constraint_count": 5,
+            "density": "High"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_018",
+  "constraints": [
+    {
+      "id": "TRAVEL_018_C1",
+      "description": "Departure airport should be selected based on the traveler's origin city, likely using a Frankfurt-area airport as the starting point.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The user states residence in Frankfurt, but the exact departure airport is not explicitly specified in executable form and must be inferred for booking."
+    },
+    {
+      "id": "TRAVEL_018_C2",
+      "description": "Arrival airport/service endpoint should be mapped to the Bangalore metropolitan destination using an appropriate commercial airport.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The destination city is given, but the exact airport must be inferred to make the request operational."
+    },
+    {
+      "id": "TRAVEL_018_C3",
+      "description": "The deadline 'by end of week' must be grounded to a specific latest arrival date/time relative to the request date and locale.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "End of week depends on interpretation and current date context, which affects feasible itinerary selection."
+    },
+    {
+      "id": "TRAVEL_018_C4",
+      "description": "Morning-flight preference must be interpreted using an approximate time window for departure.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Morning is not a universally fixed interval, but it influences ranking and selection of flights."
+    },
+    {
+      "id": "TRAVEL_018_C5",
+      "description": "The itinerary should favor booking options that permit later changes or rescheduling with manageable penalties.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The user indicates possible rescheduling, implying flexibility should be considered in fare/rule selection and coordination."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

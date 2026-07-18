@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_018",
+  "constraints": [
+    {
+      "id": "TRAVEL_018_C1",
+      "description": "origin airport resolves from the user's residence city Frankfurt to an appropriate departure airport serving commercial flights",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives the home city, not an executable airport code, so departure location must be grounded for flight search."
+    },
+    {
+      "id": "TRAVEL_018_C2",
+      "description": "end of week requires grounding to the remaining time window until the end of the current calendar week",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete booking horizon is needed to determine eligible flights."
+    },
+    {
+      "id": "TRAVEL_018_C3",
+      "description": "morning flight implies a fuzzy departure-time preference within commonly understood morning hours",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Morning is not universally fixed but is a meaningful preference for ranking options."
+    },
+    {
+      "id": "TRAVEL_018_C4",
+      "description": "itinerary should support post-booking changes or fare conditions that allow rescheduling",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The user signals possible schedule changes, so flexibility affects service selection even if not strictly required for initial feasibility."
+    },
+    {
+      "id": "TRAVEL_018_C5",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for executable flight search and defaults to one traveler when unspecified."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

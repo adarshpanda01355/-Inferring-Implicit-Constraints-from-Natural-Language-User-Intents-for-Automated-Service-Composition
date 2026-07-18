@@ -1,0 +1,23 @@
+{
+  "request_id": "HEALTH_007",
+  "constraints": [
+    {
+      "id": "HEALTH_007_C1",
+      "description": "exam type must be acceptable for driving license application requirements rather than a generic vision check",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated purpose implies the selected service must satisfy the administrative use case, otherwise the appointment would not be fit for purpose."
+    },
+    {
+      "id": "HEALTH_007_C2",
+      "description": "provider must be able to issue the documentation or certificate needed for a driving license application if the exam outcome is to be used in that process",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A routine eye exam alone may be insufficient unless the provider can produce the required application-facing documentation."
+    }
+  ],
+  "constraint_count": 2,
+  "density": "Low"
+}

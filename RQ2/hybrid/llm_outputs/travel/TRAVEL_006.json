@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_006",
+  "constraints": [
+    {
+      "id": "TRAVEL_006_C1",
+      "description": "Christmas period requires grounding to an approximate holiday stay window rather than a single fixed date",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Critical",
+      "notes": "Booking requires check-in/check-out dates, but 'over Christmas' is not executable without interpretation."
+    },
+    {
+      "id": "TRAVEL_006_C2",
+      "description": "Karol Bagh must be resolved as a locality within Delhi for hotel search",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The destination area needs geographic grounding to search accommodations."
+    },
+    {
+      "id": "TRAVEL_006_C3",
+      "description": "number of rooms defaults to 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotel booking requires a room count even though none was specified."
+    },
+    {
+      "id": "TRAVEL_006_C4",
+      "description": "number of guests defaults to 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Occupancy is required for valid hotel availability and pricing."
+    },
+    {
+      "id": "TRAVEL_006_C5",
+      "description": "budget ceiling must be enforced as a hotel selection filter",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated price limit must be operationalized during search and ranking."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

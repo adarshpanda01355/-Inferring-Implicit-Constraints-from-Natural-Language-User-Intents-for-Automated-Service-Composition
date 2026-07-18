@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_001",
+  "constraints": [
+    {
+      "id": "TRAVEL_001_C1",
+      "description": "Interpret 'tomorrow' relative to the current date at booking time",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The travel date must be inferred from the request time context to identify valid flights."
+    },
+    {
+      "id": "TRAVEL_001_C2",
+      "description": "Interpret '3 PM' using the local time convention of the departure context",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated time must be grounded in a timezone/local-time assumption to search correctly."
+    },
+    {
+      "id": "TRAVEL_001_C3",
+      "description": "Use commercial airports serving Stuttgart and Berlin as the flight endpoints",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "City names must be mapped to appropriate airports for flight booking."
+    },
+    {
+      "id": "TRAVEL_001_C4",
+      "description": "Assume a standard one-way flight booking unless a return trip is specified",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The request does not mention a return, so standard booking practice is to treat it as one-way."
+    },
+    {
+      "id": "TRAVEL_001_C5",
+      "description": "Assume economy class unless another cabin class is specified",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Cabin class is omitted and must default to a standard booking option."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

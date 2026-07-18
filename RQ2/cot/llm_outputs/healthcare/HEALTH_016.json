@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_016",
+  "constraints": [
+    {
+      "id": "HEALTH_016_C1",
+      "description": "The exact calendar interval for 'next week' must be grounded relative to the current date to determine eligible appointment slots.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives a relative time expression that must be converted into concrete dates for scheduling."
+    },
+    {
+      "id": "HEALTH_016_C2",
+      "description": "The search should prioritize the minimum waiting time across available providers and slots, selecting the chronologically earliest feasible appointment.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "'Earliest possible appointment' implies an optimization criterion over candidate bookings."
+    },
+    {
+      "id": "HEALTH_016_C3",
+      "description": "Private/self-pay booking pathways may be considered ahead of insurance-based pathways if they enable an earlier appointment.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The phrase 'even if it means paying privately' implies willingness to relax payer constraints to improve appointment speed."
+    },
+    {
+      "id": "HEALTH_016_C4",
+      "description": "The provider must offer physiotherapy services to individual patients in a bookable outpatient setting.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires assuming a standard patient-facing physiotherapy service rather than unrelated institutional or non-bookable services."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

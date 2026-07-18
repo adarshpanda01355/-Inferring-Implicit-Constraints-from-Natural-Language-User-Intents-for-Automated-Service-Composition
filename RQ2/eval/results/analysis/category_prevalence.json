@@ -1,0 +1,80 @@
+[
+  {
+    "domain": "travel",
+    "scope": "full_gold",
+    "total_constraints": 88,
+    "count_temporal": 26,
+    "pct_temporal": 29.55,
+    "count_spatial": 17,
+    "pct_spatial": 19.32,
+    "count_logical": 11,
+    "pct_logical": 12.5,
+    "count_domain_default": 34,
+    "pct_domain_default": 38.64
+  },
+  {
+    "domain": "travel",
+    "scope": "subset",
+    "total_constraints": 36,
+    "count_temporal": 13,
+    "pct_temporal": 36.11,
+    "count_spatial": 5,
+    "pct_spatial": 13.89,
+    "count_logical": 5,
+    "pct_logical": 13.89,
+    "count_domain_default": 13,
+    "pct_domain_default": 36.11
+  },
+  {
+    "domain": "healthcare",
+    "scope": "full_gold",
+    "total_constraints": 85,
+    "count_temporal": 29,
+    "pct_temporal": 34.12,
+    "count_spatial": 17,
+    "pct_spatial": 20.0,
+    "count_logical": 33,
+    "pct_logical": 38.82,
+    "count_domain_default": 6,
+    "pct_domain_default": 7.06
+  },
+  {
+    "domain": "healthcare",
+    "scope": "subset",
+    "total_constraints": 30,
+    "count_temporal": 12,
+    "pct_temporal": 40.0,
+    "count_spatial": 5,
+    "pct_spatial": 16.67,
+    "count_logical": 11,
+    "pct_logical": 36.67,
+    "count_domain_default": 2,
+    "pct_domain_default": 6.67
+  },
+  {
+    "domain": "overall",
+    "scope": "full_gold",
+    "total_constraints": 173,
+    "count_temporal": 55,
+    "pct_temporal": 31.79,
+    "count_spatial": 34,
+    "pct_spatial": 19.65,
+    "count_logical": 44,
+    "pct_logical": 25.43,
+    "count_domain_default": 40,
+    "pct_domain_default": 23.12
+  },
+  {
+    "domain": "overall",
+    "scope": "subset",
+    "total_constraints": 66,
+    "count_temporal": 25,
+    "pct_temporal": 37.88,
+    "count_spatial": 10,
+    "pct_spatial": 15.15,
+    "count_logical": 16,
+    "pct_logical": 24.24,
+    "count_domain_default": 15,
+    "pct_domain_default": 22.73
+  }
+]

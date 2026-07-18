@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_007",
+  "constraints": [
+    {
+      "id": "TRAVEL_007_C1",
+      "description": "Departure should be scheduled after the current time at the moment of processing.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to interpret 'next available' as the earliest feasible future train rather than any listed service."
+    },
+    {
+      "id": "TRAVEL_007_C2",
+      "description": "The selected train should be the earliest feasible option among available services from now.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Requires ranking candidate trains by departure time and availability to satisfy 'next available'."
+    },
+    {
+      "id": "TRAVEL_007_C3",
+      "description": "Origin and destination should be interpreted as the main rail stations serving Stuttgart and Zurich unless otherwise specified.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "City names must be mapped to bookable rail stations for planning and ticketing."
+    },
+    {
+      "id": "TRAVEL_007_C4",
+      "description": "Availability should be evaluated based on whether the traveler can realistically board the train, allowing necessary lead time before departure.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "A train departing immediately may not be practically catchable; acceptable lead time has no universal fixed boundary."
+    },
+    {
+      "id": "TRAVEL_007_C5",
+      "description": "A valid rail itinerary may include required transfers if no direct train is the earliest feasible option.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Train travel planning normally permits connecting services unless the user explicitly requests direct travel only."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

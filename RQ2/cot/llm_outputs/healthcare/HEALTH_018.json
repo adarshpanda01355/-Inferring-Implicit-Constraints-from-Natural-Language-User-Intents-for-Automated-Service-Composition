@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_018",
+  "constraints": [
+    {
+      "id": "HEALTH_018_C1",
+      "description": "The phrase 'next Wednesday' must be grounded to a specific calendar date relative to the request time.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete booking date is required for scheduling, but the request gives only a relative weekday reference."
+    },
+    {
+      "id": "HEALTH_018_C2",
+      "description": "The phrase 'afternoon' must be interpreted as an approximate time window for appointment selection.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Afternoon is not a universally fixed interval, but it guides slot filtering."
+    },
+    {
+      "id": "HEALTH_018_C3",
+      "description": "The ultrasound appointment must leave sufficient buffer before the gastroenterology follow-up on 4 June 2026 for the result to be available and usable.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request states 'before' the follow-up explicitly, but planning also requires inferring practical coordination so the exam meaningfully precedes the follow-up."
+    },
+    {
+      "id": "HEALTH_018_C4",
+      "description": "The selected provider must be an appropriate medical facility that performs abdominal ultrasound examinations.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires choosing a clinic or imaging provider capable of delivering the requested exam."
+    },
+    {
+      "id": "HEALTH_018_C5",
+      "description": "The preferred clinic should be reasonably close to Alexanderplatz, which requires interpreting what counts as 'near'.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Nearness affects provider ranking but has no universally fixed geographic boundary."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

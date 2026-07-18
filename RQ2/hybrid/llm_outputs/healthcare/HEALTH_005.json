@@ -1,0 +1,23 @@
+{
+  "request_id": "HEALTH_005",
+  "constraints": [
+    {
+      "id": "HEALTH_005_C1",
+      "description": "follow-up date derived as surgery date + 14 days",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Two weeks after 10 June 2026 must be calendar-grounded to determine the appointment date."
+    },
+    {
+      "id": "HEALTH_005_C2",
+      "description": "wound check must occur after the surgical procedure",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A post-operative wound check is only valid after the knee surgery has taken place."
+    }
+  ],
+  "constraint_count": 2,
+  "density": "Low"
+}

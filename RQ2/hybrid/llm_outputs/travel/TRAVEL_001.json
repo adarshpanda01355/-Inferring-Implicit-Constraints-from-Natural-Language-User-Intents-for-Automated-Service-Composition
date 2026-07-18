@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_001",
+  "constraints": [
+    {
+      "id": "TRAVEL_001_C1",
+      "description": "\"tomorrow\" must be grounded to the next calendar date relative to the request time",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Date grounding is required to search and book flights on the correct day."
+    },
+    {
+      "id": "TRAVEL_001_C2",
+      "description": "departure time of 3 PM must be interpreted in the local time zone of the departure location",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Flight search needs a concrete local-time interpretation to match schedules correctly."
+    },
+    {
+      "id": "TRAVEL_001_C3",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request specifies one adult, which implies a single traveler for booking and fare selection."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

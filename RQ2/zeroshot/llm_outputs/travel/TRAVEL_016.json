@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_016",
+  "constraints": [
+    {
+      "id": "TRAVEL_016_C1",
+      "description": "The hotel search should use a relevant railway station in Copenhagen as the reference point for the 5 km distance filter.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request says 'from station' without naming which station; planning requires choosing an appropriate station anchor."
+    },
+    {
+      "id": "TRAVEL_016_C2",
+      "description": "The stay should begin on April 15 of the next applicable calendar occurrence relative to the time of booking.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Year is omitted, so the system must infer the next valid April 15 based on current date."
+    },
+    {
+      "id": "TRAVEL_016_C3",
+      "description": "The booking should cover consecutive nights starting from the inferred check-in date.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotel bookings for 2 or 3 nights normally imply uninterrupted consecutive stay unless otherwise stated."
+    },
+    {
+      "id": "TRAVEL_016_C4",
+      "description": "The room booked should be suitable for the traveler count implied by the request, defaulting to one room for one unspecified party.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request specifies price per room but not number of travelers or rooms; a standard default is needed to complete booking."
+    },
+    {
+      "id": "TRAVEL_016_C5",
+      "description": "Among hotels satisfying the explicit filters, preference should be given to options judged as 'good' by standard quality signals such as ratings or reviews.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "'Good hotel' is subjective and requires heuristic ranking for service selection."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

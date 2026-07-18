@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_002",
+  "constraints": [
+    {
+      "id": "TRAVEL_002_C1",
+      "description": "next weekend requires grounding to the upcoming weekend date range relative to the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Calendar resolution is necessary to determine check-in and check-out dates."
+    },
+    {
+      "id": "TRAVEL_002_C2",
+      "description": "near Manyata Tech Park implies a fuzzy proximity threshold for hotel selection",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The request specifies proximity preference, but 'near' has no fixed universal distance."
+    },
+    {
+      "id": "TRAVEL_002_C3",
+      "description": "hotel stay is assumed to cover the weekend period with check-in before or at the start of the weekend and check-out after or at its end",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "A usable hotel booking must align with the intended weekend stay, though exact arrival and departure times are not specified."
+    },
+    {
+      "id": "TRAVEL_002_C4",
+      "description": "number of rooms assumed to be 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotel booking requires a room count, and a single room is the standard default when unspecified."
+    },
+    {
+      "id": "TRAVEL_002_C5",
+      "description": "number of guests assumed to be 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Occupancy is required for hotel search and pricing, and one traveler is the standard default when unspecified."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

@@ -1,0 +1,757 @@
+{
+  "domain": "healthcare",
+  "summary": {
+    "requests_compared": 25,
+    "constraint_count_exact_agreement": 0.48,
+    "density_kappa": 0.45,
+    "avg_constraint_precision": 0.731,
+    "avg_constraint_recall": 0.673,
+    "avg_constraint_f1": 0.688,
+    "aligned_constraint_pairs": 54,
+    "category_kappa": 0.973,
+    "resolvability_kappa": 0.936,
+    "importance_kappa": 0.753
+  },
+  "per_request_overlap": [
+    {
+      "request_id": "HEALTH_001",
+      "human_count": 2,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "request_id": "HEALTH_002",
+      "human_count": 2,
+      "llm_count": 3,
+      "matched": 1,
+      "precision": 0.333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "request_id": "HEALTH_003",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "request_id": "HEALTH_004",
+      "human_count": 2,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "request_id": "HEALTH_005",
+      "human_count": 2,
+      "llm_count": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_006",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "request_id": "HEALTH_007",
+      "human_count": 1,
+      "llm_count": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "request_id": "HEALTH_008",
+      "human_count": 2,
+      "llm_count": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_009",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.667,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_count": 3,
+      "llm_count": 4,
+      "matched": 1,
+      "precision": 0.25,
+      "recall": 0.333,
+      "f1": 0.286
+    },
+    {
+      "request_id": "HEALTH_011",
+      "human_count": 4,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.5,
+      "f1": 0.571
+    },
+    {
+      "request_id": "HEALTH_012",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.667,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_013",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "request_id": "HEALTH_014",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 1,
+      "precision": 0.333,
+      "recall": 0.333,
+      "f1": 0.333
+    },
+    {
+      "request_id": "HEALTH_015",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.667,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_016",
+      "human_count": 3,
+      "llm_count": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8
+    },
+    {
+      "request_id": "HEALTH_017",
+      "human_count": 4,
+      "llm_count": 4,
+      "matched": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "request_id": "HEALTH_018",
+      "human_count": 5,
+      "llm_count": 5,
+      "matched": 3,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_020",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_021",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_022",
+      "human_count": 5,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.4,
+      "f1": 0.5
+    },
+    {
+      "request_id": "HEALTH_023",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "HEALTH_024",
+      "human_count": 5,
+      "llm_count": 5,
+      "matched": 4,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    },
+    {
+      "request_id": "HEALTH_025",
+      "human_count": 5,
+      "llm_count": 5,
+      "matched": 4,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    }
+  ],
+  "disagreements": [
+    {
+      "request_id": "HEALTH_001",
+      "human_description": null,
+      "llm_description": "Apply standard tooth-extraction treatment protocol requirements during booking.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_002",
+      "human_description": "early morning corresponds to a conventional but non-universal clinical time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_002",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'early in the morning'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_002",
+      "human_description": null,
+      "llm_description": "Assume standard fasting preparation compatibility for the blood glucose test.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_004",
+      "human_description": null,
+      "llm_description": "Verify standard MMR vaccination eligibility and pediatric vaccination booking requirements for the child.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_005",
+      "human_description": "wound check must occur after the surgical procedure",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_008",
+      "human_description": "consultation date must align with 12 May 2026",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_009",
+      "human_description": "evening corresponds to a business-hours-adjacent appointment window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_009",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'evening'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": "provider must support both consultation and imaging services within the same facility",
+      "llm_description": "Prefer a hospital where consultation and imaging can be coordinated during the same visit.",
+      "differences": {
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": "next week resolved to upcoming Monday-Sunday interval",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": "insurance coverage must apply across all required services",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": null,
+      "llm_description": "Resolve 'starting next week' to the applicable booking window.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": null,
+      "llm_description": "Route the case as urgent injury care appropriate for an elbow injury after a fall.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_010",
+      "human_description": null,
+      "llm_description": "Ensure the booking pathway is compatible with insurance coverage to avoid unexpected out-of-pocket costs.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_011",
+      "human_description": "provider must support both orthopedic consultation and MRI services within the same facility",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_011",
+      "human_description": "Alexanderplatz requires grounding to the relevant city",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_011",
+      "human_description": null,
+      "llm_description": "Choose a clinic with downstream MRI capability or coordination available if later required.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_012",
+      "human_description": "reasonable budget implies fuzzy budget constraint",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_012",
+      "human_description": null,
+      "llm_description": "Interpret what qualifies as a 'reasonable budget'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_013",
+      "human_description": "provider must support both public insurance coverage and optional private consultation pathways",
+      "llm_description": "Prefer the standard insurance-covered booking pathway for the consultation.",
+      "differences": {
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_013",
+      "human_description": "service configuration must allow switching between public and private pathways without conflict",
+      "llm_description": "Allow switching to a higher-cost/private pathway if that is necessary to obtain an earlier appointment.",
+      "differences": {
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_014",
+      "human_description": "evening corresponds to a conventional but non-universal time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_014",
+      "human_description": "provider identity should remain consistent across initial consultation and potential follow-up",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_014",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'evening'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_014",
+      "human_description": null,
+      "llm_description": "Prefer a provider setup that supports continuity with the same clinician if treatment continues.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_015",
+      "human_description": "provider must allow direct booking without a prior referral",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_015",
+      "human_description": null,
+      "llm_description": "Prefer a pathway that does not require referral or additional paperwork before the consultation.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_016",
+      "human_description": "request implies willingness to use private/self-pay pathway to access earlier availability",
+      "llm_description": "Allow use of a private/self-pay pathway if needed to secure a faster appointment.",
+      "differences": {
+        "category": {
+          "human": "Domain-default",
+          "llm": "Logical"
+        },
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_016",
+      "human_description": "appointment selection should prioritize earliest available slot",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_017",
+      "human_description": "Schwabstrasse requires grounding to the relevant Stuttgart location",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_017",
+      "human_description": "deep cut on hand implies urgent-care treatment context rather than routine consultation scheduling",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_017",
+      "human_description": null,
+      "llm_description": "Route the case to urgent appropriate care for a deep hand cut.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_017",
+      "human_description": null,
+      "llm_description": "Restrict results to clinics that can take the patient at the current hour.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_018",
+      "human_description": "afternoon corresponds to a conventional but non-universal clinical time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_018",
+      "human_description": "Alexanderplatz requires grounding to the relevant Berlin location",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_018",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'afternoon'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_018",
+      "human_description": null,
+      "llm_description": "Interpret acceptable proximity to Alexanderplatz.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_description": "early next week requires grounding to a fuzzy interval within the upcoming week",
+      "llm_description": "Resolve 'next week' to the relevant scheduling window.",
+      "differences": {
+        "resolvability": {
+          "human": "Vague",
+          "llm": "Implicit"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_description": "physiotherapy must occur after the consultation event if required",
+      "llm_description": "If physiotherapy is needed, coordinate it to occur soon after the orthopedic consultation.",
+      "differences": {
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_description": "conditional scheduling of physiotherapy based on consultation outcome",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_description": "somewhere central implies vague city-center proximity",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_019",
+      "human_description": null,
+      "llm_description": "Interpret the preference for the early part of next week.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_020",
+      "human_description": "regular weekly continuation implies continuity with the same therapist",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_020",
+      "human_description": "therapy service should support both in-person and virtual session options",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_020",
+      "human_description": null,
+      "llm_description": "Prefer a provider or modality that can still work when in-person attendance is difficult.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_021",
+      "human_description": "provider must allow direct booking without a prior referral",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_021",
+      "human_description": "provider should support both ENT consultation and hearing testing within the same care setting to make same-day coordination feasible",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_021",
+      "human_description": null,
+      "llm_description": "Prefer a pathway that does not require referral or additional paperwork before being seen.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_022",
+      "human_description": "ambulance request implies immediate dispatch in the current time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_022",
+      "human_description": "accident with suspected dislocation implies emergency-care routing rather than routine outpatient scheduling",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_022",
+      "human_description": "service should be compatible with the patient's insurance coverage for emergency care",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_022",
+      "human_description": null,
+      "llm_description": "Route the case as emergency-capable care appropriate for an accident with a suspected dislocated knee.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_023",
+      "human_description": "later in the afternoon corresponds to a non-universal but conventional clinical time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_023",
+      "human_description": "service should be compatible with public insurance coverage for vaccination administration",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_023",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'later in the afternoon'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_024",
+      "human_description": "late afternoon corresponds to a non-universal but conventional time window",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_024",
+      "human_description": null,
+      "llm_description": "Interpret the time window for 'late in the afternoon'.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_025",
+      "human_description": "service configuration must allow switching between public insurance and private appointment pathways without conflict",
+      "llm_description": "Prefer the regular insurance-covered booking pathway.",
+      "differences": {
+        "importance": {
+          "human": "Useful",
+          "llm": "Critical"
+        }
+      }
+    },
+    {
+      "request_id": "HEALTH_025",
+      "human_description": "provider must support both specialist eye examination and vision certification within the same facility",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "HEALTH_025",
+      "human_description": null,
+      "llm_description": "Allow switching to a higher-cost/private pathway only if that is necessary to obtain a faster appointment.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    }
+  ]
+}

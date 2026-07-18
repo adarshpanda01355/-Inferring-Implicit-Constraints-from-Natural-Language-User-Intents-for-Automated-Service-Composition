@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_010",
+  "constraints": [
+    {
+      "id": "HEALTH_010_C1",
+      "description": "\"starting next week\" requires calendar grounding to the first day of the upcoming week and dates thereafter",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Date interpretation is needed to search for valid appointment availability."
+    },
+    {
+      "id": "HEALTH_010_C2",
+      "description": "elbow injury evaluation and possible imaging should be coordinated within the same visit if imaging is needed",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The request indicates a preference to avoid separate visits by aligning diagnostics with the initial hospital visit."
+    },
+    {
+      "id": "HEALTH_010_C3",
+      "description": "selected hospital must have access to imaging capability or an integrated referral path that can support same-visit imaging",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Same-visit imaging is only feasible if the hospital can provide or immediately coordinate the diagnostic service."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

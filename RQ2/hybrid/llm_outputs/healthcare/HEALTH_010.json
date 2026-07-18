@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_010",
+  "constraints": [
+    {
+      "id": "HEALTH_010_C1",
+      "description": "starting next week requires calendar grounding to the first available dates from the upcoming week onward",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The search window cannot be executed until 'next week' is converted into actual dates."
+    },
+    {
+      "id": "HEALTH_010_C2",
+      "description": "elbow injury after a fall implies the hospital must be able to assess traumatic musculoskeletal injuries",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Service selection must target facilities appropriate for injury evaluation rather than any general hospital department."
+    },
+    {
+      "id": "HEALTH_010_C3",
+      "description": "possible imaging must be coordinable within the same visit as the clinical assessment",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The user indicates imaging may be needed during the same visit, so integrated or tightly coordinated diagnostics improve plan quality."
+    },
+    {
+      "id": "HEALTH_010_C4",
+      "description": "provider should have on-site or directly accessible imaging capability suitable for elbow trauma workup",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "If imaging becomes necessary, facilities without practical imaging access are less suitable."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

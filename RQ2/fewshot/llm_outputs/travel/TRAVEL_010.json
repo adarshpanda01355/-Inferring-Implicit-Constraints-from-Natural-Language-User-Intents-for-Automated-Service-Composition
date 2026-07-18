@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_010",
+  "constraints": [
+    {
+      "id": "TRAVEL_010_C1",
+      "description": "next week requires calendar grounding to the upcoming Monday-Sunday interval after the current week",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Date grounding is necessary to search eligible flights."
+    },
+    {
+      "id": "TRAVEL_010_C2",
+      "description": "reasonably priced implies a fuzzy acceptable fare range rather than strict price minimization",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This affects ranking and selection quality but does not make booking impossible."
+    },
+    {
+      "id": "TRAVEL_010_C3",
+      "description": "does not involve too many layovers implies an upper bound on stop count that is not explicitly defined",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The planner should prefer direct or low-stop itineraries, but 'too many' has no universal cutoff."
+    },
+    {
+      "id": "TRAVEL_010_C4",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Flight booking requires a passenger count when none is specified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,164 @@
+{
+  "started_at": "2026-04-11T11:37:11.361709+00:00",
+  "model": "gpt-5.4",
+  "methods": [
+    "cot"
+  ],
+  "domains": [
+    "travel",
+    "healthcare"
+  ],
+  "temperature": 0.0,
+  "max_output_tokens": 1800,
+  "timeout_seconds": 60.0,
+  "max_attempts": 3,
+  "runs": {
+    "cot": {
+      "travel": {
+        "attempted": 10,
+        "saved_json": 10,
+        "raw_failures": 0,
+        "api_failures": 0,
+        "failed_request_ids": [],
+        "records": [
+          {
+            "request_id": "TRAVEL_001",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_001.json"
+          },
+          {
+            "request_id": "TRAVEL_002",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_002.json"
+          },
+          {
+            "request_id": "TRAVEL_005",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_005.json"
+          },
+          {
+            "request_id": "TRAVEL_006",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_006.json"
+          },
+          {
+            "request_id": "TRAVEL_007",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_007.json"
+          },
+          {
+            "request_id": "TRAVEL_010",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_010.json"
+          },
+          {
+            "request_id": "TRAVEL_011",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_011.json"
+          },
+          {
+            "request_id": "TRAVEL_016",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_016.json"
+          },
+          {
+            "request_id": "TRAVEL_018",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_018.json"
+          },
+          {
+            "request_id": "TRAVEL_023",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\travel\\TRAVEL_023.json"
+          }
+        ]
+      },
+      "healthcare": {
+        "attempted": 10,
+        "saved_json": 10,
+        "raw_failures": 0,
+        "api_failures": 0,
+        "failed_request_ids": [],
+        "records": [
+          {
+            "request_id": "HEALTH_001",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_001.json"
+          },
+          {
+            "request_id": "HEALTH_007",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_007.json"
+          },
+          {
+            "request_id": "HEALTH_023",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_023.json"
+          },
+          {
+            "request_id": "HEALTH_002",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_002.json"
+          },
+          {
+            "request_id": "HEALTH_010",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_010.json"
+          },
+          {
+            "request_id": "HEALTH_011",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_011.json"
+          },
+          {
+            "request_id": "HEALTH_018",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_018.json"
+          },
+          {
+            "request_id": "HEALTH_005",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_005.json"
+          },
+          {
+            "request_id": "HEALTH_006",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_006.json"
+          },
+          {
+            "request_id": "HEALTH_016",
+            "status": "saved_json",
+            "attempts_used": 1,
+            "output_file": "C:\\Users\\adars\\Desktop\\RPupdatedWork2.0\\Research Project - Code (1)\\RQ2\\cot\\llm_outputs\\healthcare\\HEALTH_016.json"
+          }
+        ]
+      }
+    }
+  },
+  "totals": {
+    "attempted": 20,
+    "saved_json": 20,
+    "raw_failures": 0,
+    "api_failures": 0
+  },
+  "finished_at": "2026-04-11T11:40:57.618725+00:00"
+}

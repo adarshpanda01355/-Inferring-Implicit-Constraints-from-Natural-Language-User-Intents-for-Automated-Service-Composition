@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_011",
+  "constraints": [
+    {
+      "id": "HEALTH_011_C1",
+      "description": "next week requires calendar grounding to the upcoming Monday-Sunday interval",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Date grounding is necessary to search appointment availability."
+    },
+    {
+      "id": "HEALTH_011_C2",
+      "description": "clinic should support both orthopedic consultation and MRI access within the same facility or provider network for possible later follow-up",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request implies future continuity of care if imaging becomes necessary."
+    },
+    {
+      "id": "HEALTH_011_C3",
+      "description": "MRI service must be available after the orthopedic consultation rather than before it if later deemed necessary",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The wording 'later if needed' implies a dependency where MRI follows clinical assessment and only occurs conditionally."
+    },
+    {
+      "id": "HEALTH_011_C4",
+      "description": "easy to reach from Alexanderplatz implies a fuzzy accessibility threshold based on travel convenience",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "Accessibility from the reference point matters for selection quality, but 'easy to reach' has no fixed boundary."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

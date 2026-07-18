@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_002",
+  "constraints": [
+    {
+      "id": "TRAVEL_002_C1",
+      "description": "\"Next weekend\" must be grounded to the specific upcoming Saturday–Sunday dates relative to the request time.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Required to convert the natural-language time reference into executable booking dates."
+    },
+    {
+      "id": "TRAVEL_002_C2",
+      "description": "The hotel stay is implicitly expected to cover the relevant nights associated with next weekend rather than an unspecified subset.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Weekend hotel requests usually imply a stay spanning weekend nights, but exact check-in/check-out boundaries are not universally fixed."
+    },
+    {
+      "id": "TRAVEL_002_C3",
+      "description": "\"Near Manyata Tech Park\" requires interpreting an acceptable proximity radius or travel-time threshold for hotel selection.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Necessary to rank or filter hotels by closeness, but no universal cutoff defines near."
+    },
+    {
+      "id": "TRAVEL_002_C4",
+      "description": "The search must ground Manyata Tech Park to its geographic location within Bangalore for proximity evaluation.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to compute distance and identify candidate hotels in the correct area."
+    },
+    {
+      "id": "TRAVEL_002_C5",
+      "description": "A valid hotel booking assumes availability for the inferred weekend dates before selection can be finalized.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Availability is a standard prerequisite for fulfilling any hotel request."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

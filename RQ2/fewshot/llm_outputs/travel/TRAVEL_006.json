@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_006",
+  "constraints": [
+    {
+      "id": "TRAVEL_006_C1",
+      "description": "Christmas period = fuzzy holiday dates for hotel booking",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Critical",
+      "notes": "The booking window must be grounded from the holiday reference, but exact dates are not universally fixed."
+    },
+    {
+      "id": "TRAVEL_006_C2",
+      "description": "Karol Bagh resolves to Delhi",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The locality must be mapped to its city to search for hotels in the correct destination area."
+    },
+    {
+      "id": "TRAVEL_006_C3",
+      "description": "Number of rooms: 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A hotel search requires a room count, and a single room is the standard default when unspecified."
+    },
+    {
+      "id": "TRAVEL_006_C4",
+      "description": "Number of guests: 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Occupancy is required for valid hotel pricing and availability; one traveler is the standard default when unspecified."
+    },
+    {
+      "id": "TRAVEL_006_C5",
+      "description": "budget threshold applied during hotel selection",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated nightly price cap must be enforced as a filtering condition when selecting hotels."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_002",
+  "constraints": [
+    {
+      "id": "HEALTH_002_C1",
+      "description": "The appointment should be scheduled after an overnight fast, typically requiring no caloric intake for about 8–12 hours before sample collection.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Fasting is stated, but the operational fasting window must be inferred to ensure test validity."
+    },
+    {
+      "id": "HEALTH_002_C2",
+      "description": "The selected lab must offer fasting blood glucose testing as a supported service.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Service compatibility is required for feasible booking even though not explicitly framed as a selection constraint."
+    },
+    {
+      "id": "HEALTH_002_C3",
+      "description": "The requested time should be interpreted within the lab's available operating hours tomorrow morning.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Scheduling must reconcile the requested period with actual appointment availability."
+    },
+    {
+      "id": "HEALTH_002_C4",
+      "description": "\"Early in the morning\" must be mapped to an approximate appointment window rather than a fixed time.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The phrase is subjective and affects slot selection quality."
+    },
+    {
+      "id": "HEALTH_002_C5",
+      "description": "If multiple suitable labs are available in Berlin, a reasonable selection should favor one that minimizes travel burden for the user.",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "No exact district or address is given, so proximity preference is inferred but underspecified."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

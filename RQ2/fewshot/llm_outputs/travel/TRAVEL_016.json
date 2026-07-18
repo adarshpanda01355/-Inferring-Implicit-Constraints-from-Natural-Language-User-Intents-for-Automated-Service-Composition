@@ -1,0 +1,63 @@
+{
+  "request_id": "TRAVEL_016",
+  "constraints": [
+    {
+      "id": "TRAVEL_016_C1",
+      "description": "April 15th onwards requires grounding to the first eligible check-in date on or after April 15 in the relevant year",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The date is given without a year, so planning must infer which upcoming April 15 applies."
+    },
+    {
+      "id": "TRAVEL_016_C2",
+      "description": "within 5 kms from station requires selecting a reference station in Copenhagen",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request says 'station' without naming which one, so distance filtering depends on choosing the intended station."
+    },
+    {
+      "id": "TRAVEL_016_C3",
+      "description": "good hotel implies a quality threshold based on ratings or reviews",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "Good is subjective but affects ranking and selection quality."
+    },
+    {
+      "id": "TRAVEL_016_C4",
+      "description": "hotel must be able to provide vegetarian meal service during the stay",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Meal availability must align with the booking period, not just exist in general."
+    },
+    {
+      "id": "TRAVEL_016_C5",
+      "description": "stay duration depends on nightly room rate: 3 nights if under 30 EUR, otherwise 2 nights",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "This conditional rule determines the final booking length and must be evaluated before booking."
+    },
+    {
+      "id": "TRAVEL_016_C6",
+      "description": "1 room",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request refers to per-room pricing and asks to book a hotel without specifying multiple rooms."
+    },
+    {
+      "id": "TRAVEL_016_C7",
+      "description": "1 guest",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Occupancy is not specified, so single traveler is the standard default for hotel search."
+    }
+  ],
+  "constraint_count": 7,
+  "density": "High"
+}

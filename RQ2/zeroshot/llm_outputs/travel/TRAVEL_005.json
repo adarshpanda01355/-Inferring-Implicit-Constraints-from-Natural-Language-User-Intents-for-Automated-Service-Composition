@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_005",
+  "constraints": [
+    {
+      "id": "TRAVEL_005_C1",
+      "description": "The exact calendar date for \"this Friday\" must be resolved relative to the request time.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Booking requires a specific date even though only a relative weekday is given."
+    },
+    {
+      "id": "TRAVEL_005_C2",
+      "description": "The rental period should be interpreted as starting and ending within the airport rental provider's same-day operating window.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "\"Full day\" implies a same-day rental span, but exact pickup and return times depend on provider hours and common booking practice."
+    },
+    {
+      "id": "TRAVEL_005_C3",
+      "description": "The pickup location should be coordinated with rental agencies serving Munich Airport rather than the broader Munich area.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Service selection must target airport-based or airport-serving rental providers."
+    },
+    {
+      "id": "TRAVEL_005_C4",
+      "description": "A valid rental requires assuming the traveler meets standard car-rental eligibility requirements such as license and age.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "These are standard prerequisites for feasibility even though not stated in the request."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

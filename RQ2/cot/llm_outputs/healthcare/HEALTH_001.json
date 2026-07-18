@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_001",
+  "constraints": [
+    {
+      "id": "HEALTH_001_C1",
+      "description": "Interpret 'next Tuesday' as the calendar date immediately following the current week context.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete booking requires grounding the relative date expression to an exact date."
+    },
+    {
+      "id": "HEALTH_001_C2",
+      "description": "Select a provider that is qualified and equipped to perform a tooth extraction.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request names a procedure, so the service must be a dental provider offering that treatment."
+    },
+    {
+      "id": "HEALTH_001_C3",
+      "description": "Assume the appointment must occur during the provider's available operating hours on the requested day.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Booking feasibility depends on matching the request to actual appointment availability."
+    },
+    {
+      "id": "HEALTH_001_C4",
+      "description": "Interpret 'near Feuersee' using a reasonable proximity threshold around Feuersee rather than an exact boundary.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The location anchor is explicit, but the acceptable distance for 'near' must be inferred."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

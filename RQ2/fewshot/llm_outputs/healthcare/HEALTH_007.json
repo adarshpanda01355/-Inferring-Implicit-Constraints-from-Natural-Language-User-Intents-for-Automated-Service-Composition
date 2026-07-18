@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_007",
+  "constraints": [
+    {
+      "id": "HEALTH_007_C1",
+      "description": "eye exam must satisfy the requirements of a driving license application rather than a general wellness check",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated purpose implies the exam must be appropriate for licensing use, otherwise the result may not be accepted."
+    },
+    {
+      "id": "HEALTH_007_C2",
+      "description": "provider must be able to issue the documentation or certificate needed for the driving license application",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "An exam alone is insufficient if no application-usable proof can be produced."
+    },
+    {
+      "id": "HEALTH_007_C3",
+      "description": "appointment should be scheduled early enough to be usable within the driving license application process",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request implies some application-related urgency, but no exact deadline is given."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

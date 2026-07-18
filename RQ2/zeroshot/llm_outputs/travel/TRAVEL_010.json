@@ -1,0 +1,55 @@
+{
+  "request_id": "TRAVEL_010",
+  "constraints": [
+    {
+      "id": "TRAVEL_010_C1",
+      "description": "Interpret 'next week' relative to the current date as the upcoming calendar week for travel date selection.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives a relative time expression that must be grounded to actual dates before booking."
+    },
+    {
+      "id": "TRAVEL_010_C2",
+      "description": "Select a specific departure date within next week based on availability and fare optimization.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "A concrete date is required to complete booking, but the user has not specified which day within the allowed window."
+    },
+    {
+      "id": "TRAVEL_010_C3",
+      "description": "Assume travel is for a one-way flight unless a return segment is separately specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request mentions only a flight from Delhi to Rome and provides no return details."
+    },
+    {
+      "id": "TRAVEL_010_C4",
+      "description": "Use a standard commercial airport serving Delhi as the departure point and a standard commercial airport serving Rome as the arrival point.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "City names must be mapped to bookable airports for service execution."
+    },
+    {
+      "id": "TRAVEL_010_C5",
+      "description": "Treat 'reasonably priced' as preferring lower fares relative to typical economy options on the route and dates.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The user expresses a price preference without a numeric budget threshold."
+    },
+    {
+      "id": "TRAVEL_010_C6",
+      "description": "Interpret 'does not involve too many layovers' as preferring itineraries with fewer stops, ideally nonstop or one-stop.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The acceptable number of layovers is not explicitly bounded but affects itinerary ranking and selection."
+    }
+  ],
+  "constraint_count": 6,
+  "density": "High"
+}

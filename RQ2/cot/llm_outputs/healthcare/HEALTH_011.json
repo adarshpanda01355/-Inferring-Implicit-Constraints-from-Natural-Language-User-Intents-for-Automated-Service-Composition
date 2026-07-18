@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_011",
+  "constraints": [
+    {
+      "id": "HEALTH_011_C1",
+      "description": "Interpret 'next week' as the calendar week immediately following the current date and map it to concrete appointment dates.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to convert the relative time expression into schedulable dates."
+    },
+    {
+      "id": "HEALTH_011_C2",
+      "description": "The clinic should either provide MRI services on-site or have a clearly coordinated pathway to obtain an MRI there later if medically indicated.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "'Can also get an MRI done later if needed' implies future service compatibility and coordination, but the exact acceptable arrangement is not fully fixed."
+    },
+    {
+      "id": "HEALTH_011_C3",
+      "description": "The orthopedic consultation and any later MRI should be organizationally compatible within the same clinic setting to reduce referral friction.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The wording favors a clinic where follow-up imaging can be arranged without changing providers, though the exact degree of integration is not explicit."
+    },
+    {
+      "id": "HEALTH_011_C4",
+      "description": "Travel convenience from Alexanderplatz should be evaluated using practical accessibility, typically via public transport or short travel time rather than straight-line distance alone.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "'Easy to reach' requires interpreting accessibility in operational terms for service selection."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

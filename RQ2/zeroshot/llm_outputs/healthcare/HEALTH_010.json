@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_010",
+  "constraints": [
+    {
+      "id": "HEALTH_010_C1",
+      "description": "\"Next week\" should be resolved relative to the current date into a concrete scheduling window.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to search for valid appointment availability in the intended time frame."
+    },
+    {
+      "id": "HEALTH_010_C2",
+      "description": "The hospital should be able to evaluate and treat an acute musculoskeletal/trauma-related elbow injury.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A suitable department such as emergency, trauma, or orthopedics is required for correctness."
+    },
+    {
+      "id": "HEALTH_010_C3",
+      "description": "If imaging is needed, the selected hospital should have imaging services available and coordinable on the same visit.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request expresses possible need rather than certainty, but same-visit coordination affects provider selection."
+    },
+    {
+      "id": "HEALTH_010_C4",
+      "description": "The visit should support clinical triage to determine whether imaging is necessary after the fall.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Imaging is contingent on medical assessment, so the provider must support evaluation before or alongside imaging."
+    },
+    {
+      "id": "HEALTH_010_C5",
+      "description": "The hospital search should assume practical accessibility within Stuttgart rather than any arbitrary facility in the broader region.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The named city is explicit, but planning typically requires interpreting serviceability within that urban area."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

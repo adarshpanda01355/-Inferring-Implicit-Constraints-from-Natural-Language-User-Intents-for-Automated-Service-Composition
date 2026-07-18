@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_002",
+  "constraints": [
+    {
+      "id": "TRAVEL_002_C1",
+      "description": "\"Next weekend\" must be resolved to the specific upcoming Saturday-Sunday dates relative to the time of request.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete booking window is required for search and reservation, but the request gives only a relative time expression."
+    },
+    {
+      "id": "TRAVEL_002_C2",
+      "description": "The hotel stay is implicitly expected to cover the relevant overnight period(s) of next weekend rather than a daytime-only use.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotel booking normally assumes overnight accommodation; exact check-in/check-out times are not stated but a valid stay interval is needed."
+    },
+    {
+      "id": "TRAVEL_002_C3",
+      "description": "\"Near Manyata Tech Park\" requires interpreting an acceptable proximity threshold or travel distance to the park.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Nearness has no universal cutoff, but proximity strongly affects hotel selection."
+    },
+    {
+      "id": "TRAVEL_002_C4",
+      "description": "The search should prioritize hotels that are practically accessible to Manyata Tech Park within Bangalore, not merely anywhere in the city.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The request implies optimization for convenience to the park beyond the explicit city constraint."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

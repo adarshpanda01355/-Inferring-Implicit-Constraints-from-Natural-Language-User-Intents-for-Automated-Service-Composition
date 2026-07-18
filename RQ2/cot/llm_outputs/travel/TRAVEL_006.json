@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_006",
+  "constraints": [
+    {
+      "id": "TRAVEL_006_C1",
+      "description": "The stay dates must be grounded to the Christmas holiday period for the relevant year.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "\"Over Christmas\" is not executable without mapping it to specific calendar dates."
+    },
+    {
+      "id": "TRAVEL_006_C2",
+      "description": "The hotel should be located close enough to Karol Bagh to make visiting the parents practical.",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Critical",
+      "notes": "The request names Karol Bagh as the visit destination, but acceptable hotel proximity is not explicitly defined."
+    },
+    {
+      "id": "TRAVEL_006_C3",
+      "description": "The budget constraint in EUR must be converted or compared against local hotel pricing currency for booking.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotels in Karol Bagh are likely priced in local currency, so currency normalization is needed for service selection."
+    },
+    {
+      "id": "TRAVEL_006_C4",
+      "description": "The lodging search should assume at least one overnight stay is needed during the visit.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Requesting a hotel implies a stay of one or more nights even though duration is not specified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

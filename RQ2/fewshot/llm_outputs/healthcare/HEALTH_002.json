@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_002",
+  "constraints": [
+    {
+      "id": "HEALTH_002_C1",
+      "description": "\"tomorrow\" must be grounded to the calendar date immediately following the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete date is required to search and book an appointment."
+    },
+    {
+      "id": "HEALTH_002_C2",
+      "description": "\"early in the morning\" implies a fuzzy preferred time window in the first part of the day",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request cannot be scheduled without interpreting what counts as early morning."
+    },
+    {
+      "id": "HEALTH_002_C3",
+      "description": "fasting requirement means the blood glucose test should be scheduled before food intake, making an early slot operationally preferable",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Fasting blood tests are conventionally performed before breakfast to preserve test validity."
+    },
+    {
+      "id": "HEALTH_002_C4",
+      "description": "booking assumes a single patient/test subject",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Healthcare appointment requests normally default to one person unless otherwise stated."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_010",
+  "constraints": [
+    {
+      "id": "HEALTH_010_C1",
+      "description": "\"Next week\" must be grounded to a concrete calendar interval relative to the request date to determine eligible appointment times.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request gives a relative time expression, which must be resolved into actual dates for scheduling."
+    },
+    {
+      "id": "HEALTH_010_C2",
+      "description": "The hospital should be able to evaluate and treat an acute musculoskeletal trauma case involving the elbow.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "An elbow injury after a fall implies the facility must have appropriate emergency/orthopedic capability."
+    },
+    {
+      "id": "HEALTH_010_C3",
+      "description": "If imaging is needed, it should be available or coordinable within the same hospital visit rather than requiring a separate visit.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request implies coordination between clinical assessment and imaging in one encounter."
+    },
+    {
+      "id": "HEALTH_010_C4",
+      "description": "The imaging modality and necessity must be determined based on clinical assessment of the elbow injury.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The user does not specify X-ray, CT, or MRI; this depends on medical triage and available interpretation."
+    },
+    {
+      "id": "HEALTH_010_C5",
+      "description": "The selected hospital should minimize additional coordination burden by offering both consultation and imaging on-site or through tightly integrated services.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "\"During the same visit\" suggests preference for streamlined coordination, but the acceptable degree of integration is not precisely defined."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

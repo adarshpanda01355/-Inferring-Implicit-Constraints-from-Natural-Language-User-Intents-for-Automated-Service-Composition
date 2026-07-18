@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_006",
+  "constraints": [
+    {
+      "id": "TRAVEL_006_C1",
+      "description": "The hotel stay should cover the period of the visit during Christmas.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "To make the trip feasible, accommodation dates must align with the intended Christmas visit window."
+    },
+    {
+      "id": "TRAVEL_006_C2",
+      "description": "The hotel should be located close enough to Karol Bagh to conveniently visit the parents there.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request specifies the destination of the visit, so lodging must be in or near that area, but 'close enough' has no fixed boundary."
+    },
+    {
+      "id": "TRAVEL_006_C3",
+      "description": "The accommodation must be bookable for at least one overnight stay.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A hotel booking normally implies at least one night even though duration is not explicitly stated."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

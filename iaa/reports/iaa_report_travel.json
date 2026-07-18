@@ -1,0 +1,839 @@
+{
+  "domain": "travel",
+  "summary": {
+    "requests_compared": 25,
+    "constraint_count_exact_agreement": 0.48,
+    "density_kappa": 0.576,
+    "avg_constraint_precision": 0.609,
+    "avg_constraint_recall": 0.514,
+    "avg_constraint_f1": 0.545,
+    "aligned_constraint_pairs": 49,
+    "category_kappa": 1.0,
+    "resolvability_kappa": 0.742,
+    "importance_kappa": 0.949
+  },
+  "per_request_overlap": [
+    {
+      "request_id": "TRAVEL_001",
+      "human_count": 2,
+      "llm_count": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_002",
+      "human_count": 4,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+    },
+    {
+      "request_id": "TRAVEL_003",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 2,
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.444
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_count": 6,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.333,
+      "f1": 0.444
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "human_count": 2,
+      "llm_count": 1,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "request_id": "TRAVEL_008",
+      "human_count": 1,
+      "llm_count": 1,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "request_id": "TRAVEL_009",
+      "human_count": 4,
+      "llm_count": 2,
+      "matched": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "human_count": 4,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 2,
+      "precision": 0.667,
+      "recall": 0.667,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_012",
+      "human_count": 5,
+      "llm_count": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    {
+      "request_id": "TRAVEL_013",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "request_id": "TRAVEL_014",
+      "human_count": 5,
+      "llm_count": 5,
+      "matched": 4,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    },
+    {
+      "request_id": "TRAVEL_015",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "human_count": 6,
+      "llm_count": 5,
+      "matched": 4,
+      "precision": 0.8,
+      "recall": 0.667,
+      "f1": 0.727
+    },
+    {
+      "request_id": "TRAVEL_017",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "human_count": 3,
+      "llm_count": 4,
+      "matched": 2,
+      "precision": 0.5,
+      "recall": 0.667,
+      "f1": 0.571
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_count": 3,
+      "llm_count": 4,
+      "matched": 1,
+      "precision": 0.25,
+      "recall": 0.333,
+      "f1": 0.286
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "human_count": 3,
+      "llm_count": 3,
+      "matched": 1,
+      "precision": 0.333,
+      "recall": 0.333,
+      "f1": 0.333
+    },
+    {
+      "request_id": "TRAVEL_021",
+      "human_count": 4,
+      "llm_count": 5,
+      "matched": 3,
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "human_count": 5,
+      "llm_count": 5,
+      "matched": 3,
+      "precision": 0.6,
+      "recall": 0.6,
+      "f1": 0.6
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "human_count": 2,
+      "llm_count": 2,
+      "matched": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    {
+      "request_id": "TRAVEL_024",
+      "human_count": 5,
+      "llm_count": 4,
+      "matched": 3,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667
+    },
+    {
+      "request_id": "TRAVEL_025",
+      "human_count": 2,
+      "llm_count": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    }
+  ],
+  "disagreements": [
+    {
+      "request_id": "TRAVEL_001",
+      "human_description": "Economy class",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_002",
+      "human_description": "near = fuzzy distance",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_002",
+      "human_description": null,
+      "llm_description": "Ground 'Manyata Tech Park' to its geographic location in Bangalore.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_003",
+      "human_description": "cheap = fuzzy price threshold",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_003",
+      "human_description": null,
+      "llm_description": "Optimize for a low airfare.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_description": "start date in April",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_description": "service location resolved to Berlin",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_description": "for one adult",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_description": null,
+      "llm_description": "Ground 'Humboldt University' to Berlin for accommodation search.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "human_description": null,
+      "llm_description": "Resolve 'starting in April' to a concrete start date or start window.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_description": "rental duration = start of service to end of service",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_description": "airport terminal pickup",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_description": "driver age ≥21",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_description": "car type: standard/compact default",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "human_description": null,
+      "llm_description": "Ground 'Munich airport' to the specific airport rental location.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "human_description": "Christmas period = fuzzy holiday dates for hotel booking",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "human_description": "budget threshold applied during hotel selection",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "human_description": null,
+      "llm_description": "Interpret 'over Christmas' as a hotel stay during the Christmas holiday period.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "human_description": "next available = immediate departure",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "human_description": "1 passenger",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "human_description": null,
+      "llm_description": "Select the earliest departing train available after the current time.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_008",
+      "human_description": "on route = path intersection fuzzy",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_008",
+      "human_description": null,
+      "llm_description": "Find accommodation located along the route between Stuttgart and Amsterdam.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_009",
+      "human_description": "pet policy = TRUE",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_009",
+      "human_description": "Number of rooms = 1",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "human_description": "max no. of layovers <= 1",
+      "llm_description": "Prefer itineraries with a small number of layovers.",
+      "differences": {
+        "resolvability": {
+          "human": "Implicit",
+          "llm": "Vague"
+        }
+      }
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "human_description": "reasonably priced implies economy class",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "human_description": null,
+      "llm_description": "Assume default number of passengers = 1.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "human_description": "early has no universaly defined standard window",
+      "llm_description": "Interpret 'early' as an early-day departure time window.",
+      "differences": {
+        "resolvability": {
+          "human": "Vague",
+          "llm": "Borderline"
+        }
+      }
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "human_description": "1 passenger",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "human_description": null,
+      "llm_description": "Assume a default train class/fare category.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_012",
+      "human_description": "Number of rooms:1",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_012",
+      "human_description": "Number of guests:1",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_013",
+      "human_description": "minimize price",
+      "llm_description": "Optimize for the minimum available airfare.",
+      "differences": {
+        "resolvability": {
+          "human": "Implicit",
+          "llm": "Vague"
+        },
+        "importance": {
+          "human": "Critical",
+          "llm": "Useful"
+        }
+      }
+    },
+    {
+      "request_id": "TRAVEL_014",
+      "human_description": "food service available in hotel",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_014",
+      "human_description": null,
+      "llm_description": "Prefer a hotel convenient to Frankfurt Airport because of the layover.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_015",
+      "human_description": "year inferred from the next occurrence of May 4th relative to current date",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_015",
+      "human_description": null,
+      "llm_description": "Resolve '4th of May' to the intended calendar year/date instance.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "human_description": "reference location inferred as Copenhagen Central Station",
+      "llm_description": "Resolve 'station' to the relevant default station in Copenhagen.",
+      "differences": {
+        "resolvability": {
+          "human": "Implicit",
+          "llm": "Borderline"
+        }
+      }
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "human_description": "year inferred from the next occurrence of April 15th relative to current date",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "human_description": "conditional duration selection: if price < 30 EUR/night then stay = 3 nights, else stay = 2 nights",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "human_description": null,
+      "llm_description": "Resolve 'April 15th onwards' to a specific year/date start anchor.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_017",
+      "human_description": "good view is a subjective quality",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_017",
+      "human_description": null,
+      "llm_description": "Assume default number of guests = 1.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "human_description": "morning preference no fixed standard window",
+      "llm_description": "Prefer a morning departure time window.",
+      "differences": {
+        "resolvability": {
+          "human": "Vague",
+          "llm": "Borderline"
+        }
+      }
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "human_description": "arrival deadline by end of current calendar week (Sunday)",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "human_description": null,
+      "llm_description": "Use Frankfurt as the departure origin context.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "human_description": null,
+      "llm_description": "Resolve 'by end of week' to a latest acceptable arrival/departure deadline.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_description": "near = fuzzy distance",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_description": "Provider(Parking) = Provider(Hotel)",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_description": null,
+      "llm_description": "Ground 'Porsche Museum' to its location in Stuttgart.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_description": null,
+      "llm_description": "Interpret 'near Stuttgart Porsche Museum' as a proximity preference around the museum.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "human_description": null,
+      "llm_description": "Prefer hotel parking that is on-site rather than requiring a separate public garage.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "human_description": "minimize price",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "human_description": "1 passenger",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "human_description": null,
+      "llm_description": "Optimize for the lowest train fare.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "human_description": null,
+      "llm_description": "Restrict candidate departures to Mondays and Tuesdays inside that window when feasible.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_021",
+      "human_description": "basic = minimum standard but subjective",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_021",
+      "human_description": null,
+      "llm_description": "Plan the stay/check-in to occur after the football match ends.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_021",
+      "human_description": null,
+      "llm_description": "Assume default number of rooms = 1.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "human_description": "afternoon = 12:00-18:00 subjective but domain-default could be implied",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "human_description": "Number of guests = 1",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "human_description": null,
+      "llm_description": "Ground 'UN headquarters' to the UN location in Geneva.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "human_description": null,
+      "llm_description": "Interpret 'afternoon' as an approximate arrival time window.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "human_description": "late evening = 19:00-23:00 could be inferred from domain-default but varies user to user",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "human_description": "airport closest to Ulm city center",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "human_description": null,
+      "llm_description": "Resolve the nearest usable departure airport for Ulm.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "human_description": null,
+      "llm_description": "Interpret 'late evening' as an approximate departure time window.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_024",
+      "human_description": "economy class flight",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_024",
+      "human_description": "affordable = fuzzy budget",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_024",
+      "human_description": null,
+      "llm_description": "Assume default number of rooms = 1.",
+      "differences": {
+        "extra_in_llm": true
+      }
+    },
+    {
+      "request_id": "TRAVEL_025",
+      "human_description": "1 passenger",
+      "llm_description": null,
+      "differences": {
+        "missing_in_llm": true
+      }
+    }
+  ]
+}

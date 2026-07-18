@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_010",
+  "constraints": [
+    {
+      "id": "TRAVEL_010_C1",
+      "description": "next week requires calendar grounding to the upcoming Monday-Sunday interval after the current week",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The booking system needs concrete travel dates to search flights."
+    },
+    {
+      "id": "TRAVEL_010_C2",
+      "description": "reasonably priced implies a subjective acceptable fare range rather than strict cheapest-only selection",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This affects ranking and filtering of flight options but is not a precise executable threshold."
+    },
+    {
+      "id": "TRAVEL_010_C3",
+      "description": "does not involve too many layovers implies a fuzzy upper bound on acceptable stop count",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Layover tolerance has approximate common interpretations, but no universal cutoff."
+    },
+    {
+      "id": "TRAVEL_010_C4",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Flight booking requires a passenger count, and a single traveler is the standard default when unspecified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

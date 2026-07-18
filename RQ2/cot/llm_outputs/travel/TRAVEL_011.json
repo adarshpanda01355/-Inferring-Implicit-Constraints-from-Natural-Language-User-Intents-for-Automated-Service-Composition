@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_011",
+  "constraints": [
+    {
+      "id": "TRAVEL_011_C1",
+      "description": "\"Tomorrow\" must be grounded to a specific calendar date relative to the time of request.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Booking requires converting the relative date expression into an exact travel date."
+    },
+    {
+      "id": "TRAVEL_011_C2",
+      "description": "\"Early\" must be interpreted as an early part of the day, implying preference for morning departures rather than later ones.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Service selection depends on mapping the vague time preference to a practical departure window."
+    },
+    {
+      "id": "TRAVEL_011_C3",
+      "description": "The trip should be planned using train services that connect Hamburg and Copenhagen, including any necessary transfers if no direct train is available.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking may require coordinated multi-leg rail itineraries, not only direct trains."
+    },
+    {
+      "id": "TRAVEL_011_C4",
+      "description": "Departure and arrival stations must be inferred as the standard main rail stations serving Hamburg and Copenhagen unless otherwise specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "City-level locations are given, but booking typically requires selecting concrete stations."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_001",
+  "constraints": [
+    {
+      "id": "TRAVEL_001_C1",
+      "description": "tomorrow must be grounded to the calendar date immediately following the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete travel date is required to search and book flights."
+    },
+    {
+      "id": "TRAVEL_001_C2",
+      "description": "departure time should be interpreted as local time at the origin airport in Stuttgart",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Flight search needs a timezone-consistent interpretation of the requested time."
+    },
+    {
+      "id": "TRAVEL_001_C3",
+      "description": "Berlin destination must be resolved to one of the city's serving airports or airport options during flight selection",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Berlin is a city-level destination, while flight booking operates on airport-level endpoints."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_007",
+  "constraints": [
+    {
+      "id": "TRAVEL_007_C1",
+      "description": "Interpret 'next available' relative to the current request time and select the earliest feasible departure after now.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The reference time is not explicitly encoded and must be grounded to execution time to identify the correct train."
+    },
+    {
+      "id": "TRAVEL_007_C2",
+      "description": "Assume the trip should depart from the main rail station serving Stuttgart and arrive at the main rail station serving Zurich unless a different station is required by rail schedules.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "City names are given, but station-level endpoints may need to be inferred for booking or itinerary construction."
+    },
+    {
+      "id": "TRAVEL_007_C3",
+      "description": "Select a train service that is actually bookable or boardable for the traveler at the time of search, excluding departures that are no longer feasible to catch.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Availability implies practical feasibility, not merely existence in the timetable."
+    },
+    {
+      "id": "TRAVEL_007_C4",
+      "description": "If no direct train is the next feasible option, allow an itinerary with necessary rail connections that still satisfies the earliest-arrival/earliest-departure interpretation of 'next available'.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request does not specify direct-only travel, so connection handling must be inferred during planning."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

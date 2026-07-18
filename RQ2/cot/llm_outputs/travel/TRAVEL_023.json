@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_023",
+  "constraints": [
+    {
+      "id": "TRAVEL_023_C1",
+      "description": "The departure airport must be inferred by identifying which airport is geographically nearest to Ulm and offers suitable flights to Frankfurt.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request names Ulm, not a specific airport, so airport grounding is required for booking feasibility."
+    },
+    {
+      "id": "TRAVEL_023_C2",
+      "description": "\"Late evening\" must be interpreted as a later time window within the evening for flight selection.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The term is not precisely bounded and requires approximate time interpretation."
+    },
+    {
+      "id": "TRAVEL_023_C3",
+      "description": "If multiple flights satisfy the stated criteria, the service should prefer the latest available qualifying departure.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The adjective \"late\" implies an optimization preference among evening flights."
+    },
+    {
+      "id": "TRAVEL_023_C4",
+      "description": "The destination must be grounded to a valid arrival airport or airport system serving Frankfurt.",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Frankfurt refers to a city, so the booking system must map it to an airport destination."
+    },
+    {
+      "id": "TRAVEL_023_C5",
+      "description": "A valid booking assumes the adult traveler occupies one passenger seat and no special passenger category handling is needed beyond standard adult fare rules.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Standard airline booking conventions are needed to interpret the passenger request operationally."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

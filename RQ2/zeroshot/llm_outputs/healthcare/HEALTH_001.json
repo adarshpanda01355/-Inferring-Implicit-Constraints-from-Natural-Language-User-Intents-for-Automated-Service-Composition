@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_001",
+  "constraints": [
+    {
+      "id": "HEALTH_001_C1",
+      "description": "Interpret 'next Tuesday' as the upcoming Tuesday relative to the request date and use local calendar conventions to determine the exact date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete appointment date is required for booking, but the exact date must be inferred from when the request is made."
+    },
+    {
+      "id": "HEALTH_001_C2",
+      "description": "Assume the appointment should be scheduled during the provider's normal operating hours on that Tuesday",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires selecting a time within standard clinic availability since no time is specified."
+    },
+    {
+      "id": "HEALTH_001_C3",
+      "description": "Select a dental provider qualified and equipped to perform tooth extraction rather than a general medical service",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The requested procedure implies a dentist or oral surgery provider with appropriate capability."
+    },
+    {
+      "id": "HEALTH_001_C4",
+      "description": "Interpret 'near Feuersee' using a reasonable proximity radius around Feuersee for provider selection",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "The request specifies a landmark but not an exact distance threshold, so proximity must be approximated."
+    },
+    {
+      "id": "HEALTH_001_C5",
+      "description": "Choose the earliest suitable available appointment on that Tuesday if multiple matching slots exist",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "A tie-breaking rule is needed for service selection because no preferred time or provider is given."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

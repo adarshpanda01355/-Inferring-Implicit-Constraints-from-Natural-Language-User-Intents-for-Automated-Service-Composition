@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_023",
+  "constraints": [
+    {
+      "id": "HEALTH_023_C1",
+      "description": "the first weekend of next month must be calendar-grounded to the upcoming month's first Saturday-Sunday interval",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "This date range must be derived before appointment search can begin."
+    },
+    {
+      "id": "HEALTH_023_C2",
+      "description": "later in the afternoon implies a fuzzy preference for later available afternoon appointment times",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This affects slot ranking rather than basic feasibility."
+    },
+    {
+      "id": "HEALTH_023_C3",
+      "description": "the patient is a minor, so a pediatric-appropriate vaccination provider is required",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Not every clinic or workflow is suitable for child vaccination."
+    },
+    {
+      "id": "HEALTH_023_C4",
+      "description": "a legal guardian or authorized adult must be able to consent and accompany the child if required",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Minor vaccination normally requires guardian consent and often presence."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

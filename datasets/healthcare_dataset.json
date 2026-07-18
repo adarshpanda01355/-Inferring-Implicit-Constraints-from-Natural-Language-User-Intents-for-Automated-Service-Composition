@@ -1,0 +1,104 @@
+{
+    "requests":  [
+                     {
+                         "request_id":  "HEALTH_001",
+                         "request":  "Book a tooth extraction near Feuersee next Tuesday."
+                     },
+                     {
+                         "request_id":  "HEALTH_002",
+                         "request":  "Schedule a fasting blood glucose test at a lab in Berlin tomorrow early in the morning."
+                     },
+                     {
+                         "request_id":  "HEALTH_003",
+                         "request":  "Arrange an MRI of the lumbar spine in Munich after my consultation at 10:00 on next Monday."
+                     },
+                     {
+                         "request_id":  "HEALTH_004",
+                         "request":  "Book an MMR vaccination for my child at a pediatric clinic in Stuttgart on the first working day after 1 May 2026 near the city center."
+                     },
+                     {
+                         "request_id":  "HEALTH_005",
+                         "request":  "Schedule a post-op wound check in Hamburg two weeks after my knee surgery on 10 June 2026."
+                     },
+                     {
+                         "request_id":  "HEALTH_006",
+                         "request":  "Book a physiotherapy session in Cologne on following Tuesday. I use a wheelchair and can’t manage stairs easily"
+                     },
+                     {
+                         "request_id":  "HEALTH_007",
+                         "request":  "Arrange a routine eye exam in Frankfurt on 19th August, 2026. I have a driver\u0027s license examination and need a document concerning my vision from the same visit."
+                     },
+                     {
+                         "request_id":  "HEALTH_008",
+                         "request":  "Schedule a cardiology consultation in Berlin on the same day as my stress test on 12 May 2026."
+                     },
+                     {
+                         "request_id":  "HEALTH_009",
+                         "request":  "Book a pediatric consultation near Stuttgart Hauptbahnhof this Friday evening for my son’s cough."
+                     },
+                     {
+                         "request_id":  "HEALTH_010",
+                         "request":  "Find a hospital in Stuttgart starting next week for an elbow injury after a fall. I might need imaging during the same visit, and I\u0027d rather avoid unexpected out-of-pocket costs."
+                     },
+                     {
+                         "request_id":  "HEALTH_011",
+                         "request":  "Schedule an orthopedic consultation in Berlin next week at a clinic where I can also get an MRI done later if needed, and it should be easy to reach from Alexanderplatz."
+                     },
+                     {
+                         "request_id":  "HEALTH_012",
+                         "request":  "Arrange a neurology consultation in Stuttgart next Thursday somewhere between Stuttgart Hauptbahnhof and Universitat Stuttgart within a reasonable budget if possible."
+                     },
+                     {
+                         "request_id":  "HEALTH_013",
+                         "request":  "Book a dermatology consultation in Munich next week. I’d prefer a standard covered appointment, but if waiting times are too long I may be open to paying more for an earlier visit."
+                     },
+                     {
+                         "request_id":  "HEALTH_014",
+                         "request":  "Book a psychiatry consultation in Cologne next week in the evening. If this turns into ongoing treatment, I’d rather not start over with someone new."
+                     },
+                     {
+                         "request_id":  "HEALTH_015",
+                         "request":  "Find an orthopedic consultation in Hamburg next week near Altona station. I’d like to get seen without waiting for extra paperwork first."
+                     },
+                     {
+                         "request_id":  "HEALTH_016",
+                         "request":  "Schedule a physiotherapy session in Frankfurt next week. I would like to get the earliest possible appointment even if it means paying privately."
+                     },
+                     {
+                         "request_id":  "HEALTH_017",
+                         "request":  "I got a deep cut on my hand and need a clinic as soon as possible, preferably in Schwabstrasse, but if not then wherever I can get an appointment at this hour."
+                     },
+                     {
+                         "request_id":  "HEALTH_018",
+                         "request":  "Book an abdominal ultrasound in Berlin next Wednesday afternoon before my gastroenterology follow-up on 4 June 2026. I would prefer a clinic near Alexanderplatz, but if needed I can go elsewhere to get an earlier slot."
+                     },
+                     {
+                         "request_id":  "HEALTH_019",
+                         "request":  "Arrange an orthopedic consultation somewhere in central Munich sometime early next week after my X-ray, and I would also like to schedule physiotherapy soon after the consultation if needed."
+                     },
+                     {
+                         "request_id":  "HEALTH_020",
+                         "request":  "Find me a therapist around Feuersee. I’d like to start gently and see how it goes before committing to regular weekly sessions. My schedule changes a lot, and some weeks getting there in person may be difficult"
+                     },
+                     {
+                         "request_id":  "HEALTH_021",
+                         "request":  "Book an ENT consultation in Hamburg next Thursday. I need to fit it around a hearing test on the same day, and it should be somewhere between Altona station and the university hospital. I’d like to get seen without waiting for extra paperwork first."
+                     },
+                     {
+                         "request_id":  "HEALTH_022",
+                         "request":  "My friend met with an accident near Bad Cannstatt S-Bahn station. I think he has a dislocated knee. Book an ambulance for treatment wherever there is availability. He is insured with TK."
+                     },
+                     {
+                         "request_id":  "HEALTH_023",
+                         "request":  "My child needs an MMR vaccination in Berlin during the first weekend of next month, preferably later in the afternoon, at a clinic in the Charlottenburg district. We are covered by public insurance."
+                     },
+                     {
+                         "request_id":  "HEALTH_024",
+                         "request":  "Schedule a post-surgery physiotherapy review in Frankfurt two weeks after my ACL reconstruction on 3 September 2026, preferably late in the afternoon, somewhere near the main station and easy to reach from the airport, and before my return-to-work assessment on 1 October 2026."
+                     },
+                     {
+                         "request_id":  "HEALTH_025",
+                         "request":  "Book a specialist eye exam in Hamburg for the week after next near Altona station. I need it coordinated with a vision certificate on the same day. I’d prefer the regular covered route unless paying extra is the only way to get a faster slot"
+                     }
+                 ]
+}

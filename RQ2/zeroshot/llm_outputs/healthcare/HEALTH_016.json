@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_016",
+  "constraints": [
+    {
+      "id": "HEALTH_016_C1",
+      "description": "The phrase \"next week\" must be resolved relative to the current date into a specific booking window.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to determine which dates are eligible for scheduling."
+    },
+    {
+      "id": "HEALTH_016_C2",
+      "description": "The appointment should be selected by minimizing time until the session among all available options within the allowed window.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "\"Earliest possible appointment\" implies an optimization criterion for service selection."
+    },
+    {
+      "id": "HEALTH_016_C3",
+      "description": "Private-pay options should be considered acceptable and may be prioritized if they enable an earlier appointment than insurance-covered options.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The request indicates willingness to pay privately as a trade-off to improve availability."
+    },
+    {
+      "id": "HEALTH_016_C4",
+      "description": "A valid physiotherapy booking requires an available provider in Frankfurt who can legally and operationally offer physiotherapy sessions.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Standard feasibility assumption for completing the service request."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

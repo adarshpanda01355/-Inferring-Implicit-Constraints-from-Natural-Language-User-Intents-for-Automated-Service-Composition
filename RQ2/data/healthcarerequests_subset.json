@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "created_by": "Adarsh",
+    "created_date": "2026-04-10",
+    "domain": "healthcare_booking", 
+    "description": "Subset of 10 healthcare requests for RQ2 experiments, stratified by density (3L+4M+3H) and covering all constraint categories, resolvability levels (Implicit/Vague/Borderline), and importance levels (Critical/Useful) via their gold annotations."
+  },
+  "requests": [
+    {
+      "request_id": "HEALTH_001",
+      "request": "Book a tooth extraction near Feuersee next Tuesday."
+    },
+    {
+      "request_id": "HEALTH_007", 
+      "request": "Arrange a routine eye exam in Frankfurt. I need it for my driving license application."
+    },
+    {
+      "request_id": "HEALTH_023",
+      "request": "My child needs an MMR vaccination in Berlin during the first weekend of next month, preferably later in the afternoon, at a clinic in the Charlottenburg district."
+    },
+    {
+      "request_id": "HEALTH_002",
+      "request": "Schedule a fasting blood glucose test at a lab in Berlin tomorrow early in the morning."
+    },
+    {
+      "request_id": "HEALTH_010",
+      "request": "Find a hospital in Stuttgart starting next week for an elbow injury after a fall. I might need imaging during the same visit."
+    },
+    {
+      "request_id": "HEALTH_011",
+      "request": "Schedule an orthopedic consultation in Berlin next week at a clinic where I can also get an MRI done later if needed, and it should be easy to reach from Alexanderplatz."
+    },
+    {
+      "request_id": "HEALTH_018",
+      "request": "Book an abdominal ultrasound in Berlin next Wednesday afternoon before my gastroenterology follow-up on 4 June 2026. I would prefer a clinic near Alexanderplatz."
+    },
+    {
+      "request_id": "HEALTH_005",
+      "request": "Schedule a post-op wound check in Hamburg two weeks after my knee surgery on 10 June 2026."
+    },
+    {
+      "request_id": "HEALTH_006",
+      "request": "Book a physiotherapy session in Cologne. I use a wheelchair, so getting into the building and moving around inside should not be difficult."
+    },
+    {
+      "request_id": "HEALTH_016",
+      "request": "Schedule a physiotherapy session in Frankfurt next week. I would like to get the earliest possible appointment even if it means paying privately."
+    }
+  ]
+}

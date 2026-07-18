@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_005",
+  "constraints": [
+    {
+      "id": "HEALTH_005_C1",
+      "description": "The appointment should be scheduled on the calendar date that is two weeks after 10 June 2026.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The exact follow-up date must be inferred by calculating two weeks after the surgery date."
+    },
+    {
+      "id": "HEALTH_005_C2",
+      "description": "The wound check should occur after the knee surgery has already taken place.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A post-operative check depends on completion of the surgery event before the follow-up can happen."
+    },
+    {
+      "id": "HEALTH_005_C3",
+      "description": "The selected provider must be capable of performing a post-operative wound check for knee surgery recovery.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires an appropriate medical service/provider type even though this is not explicitly operationalized."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

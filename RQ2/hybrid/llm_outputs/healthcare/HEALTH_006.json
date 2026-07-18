@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_006",
+  "constraints": [
+    {
+      "id": "HEALTH_006_C1",
+      "description": "provider facility must be wheelchair-accessible at the entrance and throughout internal circulation areas",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The request implies accessibility must cover both entering the building and moving inside, which is necessary for the appointment to be feasible."
+    },
+    {
+      "id": "HEALTH_006_C2",
+      "description": "\"should not be difficult\" implies a fuzzy threshold for acceptable accessibility effort or barrier level",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The user signals a preference for ease of access beyond bare minimum accessibility compliance, but the acceptable difficulty level is subjective."
+    },
+    {
+      "id": "HEALTH_006_C3",
+      "description": "1 patient",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A single-patient booking is the standard default when no group or companion treatment arrangement is specified."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_006",
+  "constraints": [
+    {
+      "id": "HEALTH_006_C1",
+      "description": "facility must be wheelchair-accessible at the entrance, implying step-free or ramp/lift-supported building access",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Without accessible entry, the appointment is not feasible for the user."
+    },
+    {
+      "id": "HEALTH_006_C2",
+      "description": "internal circulation within the facility must support wheelchair movement, such as sufficiently navigable corridors, doors, and treatment areas",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The user explicitly mentions moving around inside; this must be operationalized as an accessibility requirement for service selection."
+    },
+    {
+      "id": "HEALTH_006_C3",
+      "description": "\"should not be difficult\" implies a fuzzy threshold for acceptable accessibility effort rather than merely technically possible access",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This goes beyond minimum compliance and introduces a subjective quality preference in accessibility."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

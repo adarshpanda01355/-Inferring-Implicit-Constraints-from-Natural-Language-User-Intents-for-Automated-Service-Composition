@@ -1,0 +1,31 @@
+{
+  "request_id": "TRAVEL_011",
+  "constraints": [
+    {
+      "id": "TRAVEL_011_C1",
+      "description": "\"tomorrow\" must be grounded to the calendar date immediately following the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete travel date is required to search train schedules and fares."
+    },
+    {
+      "id": "TRAVEL_011_C2",
+      "description": "\"early\" implies a fuzzy preference for departures in the early part of the day, typically morning",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This affects ranking of candidate departures but is not a universally fixed time boundary."
+    },
+    {
+      "id": "TRAVEL_011_C3",
+      "description": "1 passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for a valid train booking when not otherwise specified."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "created_by": "Adarsh",
+    "created_date": "2026-03-23",
+    "domain": "travel_booking",
+    "description": "Subset of 10 travel requests for RQ2 experiments, stratified by density and covering all constraint categories, resolvability levels, and importance levels via their gold annotations."
+  },
+  "requests": [
+    {
+      "request_id": "TRAVEL_001",
+      "request": "Book a flight for one adult from Stuttgart to Berlin for tomorrow at 3 PM."
+    },
+    {
+      "request_id": "TRAVEL_002",
+      "request": "I need a hotel in Bangalore near Manyata Tech Park for next weekend."
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "request": "Book a rental car at Munich airport this Friday for the full day."
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "request": "I want to visit my parents in Karol Bagh over Christmas, need a hotel cheaper than 30 EUR per night."
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "request": "Get me on the next available train from Stuttgart to Zurich."
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "request": "Book me an economy flight from Delhi to Rome sometime next week that is reasonably priced and does not involve too many layovers."
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "request": "Book a train from Hamburg to Copenhagen leaving early tomorrow."
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "request": "Find me a good hotel in Copenhagen within 5 kms from station which serves vegetarian meals April 15th onwards. If the per night cost is less than 30 euros per room book it for 3 nights, else book for 2 nights."
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "request": "I live in Frankfurt. Get me to Bangalore by end of week, preferably morning flight. I may need to reschedule."
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "request": "Get a late economy class evening flight for one adult from the nearest airport of Ulm to Frankfurt."
+    }
+  ]
+}

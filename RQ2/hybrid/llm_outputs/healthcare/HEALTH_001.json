@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_001",
+  "constraints": [
+    {
+      "id": "HEALTH_001_C1",
+      "description": "next Tuesday must be grounded to the calendar date of the upcoming Tuesday after the current week reference point",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete date is required to search and book an appointment slot."
+    },
+    {
+      "id": "HEALTH_001_C2",
+      "description": "near Feuersee implies a fuzzy proximity area around Feuersee",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The location preference affects provider selection, but 'near' has no fixed universal distance threshold."
+    },
+    {
+      "id": "HEALTH_001_C3",
+      "description": "provider must be capable of performing a tooth extraction service",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Not every dental provider offers extraction appointments, so service capability must be inferred during selection."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

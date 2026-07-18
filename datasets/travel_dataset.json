@@ -1,0 +1,104 @@
+{
+  "requests": [
+    {
+      "request_id": "TRAVEL_001",
+      "request": "Book a flight for one adult from Stuttgart to Berlin for tomorrow at 3 PM."
+    },
+    {
+      "request_id": "TRAVEL_002",
+      "request": "I need a hotel in Bangalore near Manyata Tech Park for next weekend."
+    },
+    {
+      "request_id": "TRAVEL_003",
+      "request": "Find me a cheap flight from Munich to Paris."
+    },
+    {
+      "request_id": "TRAVEL_004",
+      "request": "I need accommodation for my semester exchange at Humboldt University starting in April, somewhere with good public transport within student budget."
+    },
+    {
+      "request_id": "TRAVEL_005",
+      "request": "Book a rental car at Munich airport this Friday for the full day."
+    },
+    {
+      "request_id": "TRAVEL_006",
+      "request": "I want to visit my parents in Karol Bagh over Christmas, need a hotel cheaper than 30 EUR per night."
+    },
+    {
+      "request_id": "TRAVEL_007",
+      "request": "Get me on the next available train from Stuttgart to Zurich."
+    },
+    {
+      "request_id": "TRAVEL_008",
+      "request": "Find a pet-friendly hotel with a double room for two person on the way from Stuttgart to Amsterdam."
+    },
+    {
+      "request_id": "TRAVEL_009",
+      "request": "Find a hotel for a couple with a cat in Central Munich from 12th of December, 2026 to 14th of December, 2026"
+    },
+    {
+      "request_id": "TRAVEL_010",
+      "request": "Book me an economy flight from Delhi to Rome sometime next week that is reasonably priced and does not involve too many layovers."
+    },
+    {
+      "request_id": "TRAVEL_011",
+      "request": "Book a train from Hamburg to Copenhagen leaving early tomorrow."
+    },
+    {
+      "request_id": "TRAVEL_012",
+      "request": "I'm attending a wedding in Jaipur for three nights on the first Friday of next month, need a place walking distance from Kasturi Bagh."
+    },
+    {
+      "request_id": "TRAVEL_013",
+      "request": "Find the cheapest flight from Split to London this week."
+    },
+    {
+      "request_id": "TRAVEL_014",
+      "request": "Find a hotel for tonight. I have a layover at FRA airport, and having something to eat at the hotel would be great."
+    },
+    {
+      "request_id": "TRAVEL_015",
+      "request": "Book a bus for me from Delhi to Agra leaving after my 12 PM meeting on 4th of May."
+    },
+    {
+      "request_id": "TRAVEL_016",
+      "request": "Find me a good hotel in Copenhagen within 5 kms from station which serves vegetarian meals April 15th onwards. If the per night cost is less than 30 euros per room book it for 3 nights, else book for 2 nights."
+    },
+    {
+      "request_id": "TRAVEL_017",
+      "request": "I want one single hotel room within 1km walk of Rijksmuseum for one night starting January 12, 2026 with a good view."
+    },
+    {
+      "request_id": "TRAVEL_018",
+      "request": "I live in Frankfurt. Get me to Bangalore by end of week, preferably morning flight. I may need to reschedule."
+    },
+    {
+      "request_id": "TRAVEL_019",
+      "request": "Book a hotel near Stuttgart Porsche Museum for my family of 4 visiting from next Friday to Sunday. I don't want to use a separate public garage for parking my car."
+    },
+    {
+      "request_id": "TRAVEL_020",
+      "request": "Find the cheapest train ticket from Munich to Berlin only on Mondays and Tuesdays if possible within the next 2 weeks."
+    },
+    {
+      "request_id": "TRAVEL_021",
+      "request": "Need a place to crash after Barca vs Real Madrid football game in Camp Nou tonight, something basic is fine."
+    },
+    {
+      "request_id": "TRAVEL_022",
+      "request": "Book a hotel with a business suite in Geneva close to UN headquarters, arriving Sunday afternoon."
+    },
+    {
+      "request_id": "TRAVEL_023",
+      "request": "Get a late economy class evening flight for one adult from the nearest airport of Ulm to Frankfurt."
+    },
+    {
+      "request_id": "TRAVEL_024",
+      "request": "I'm going to Global AI summit in the capital of India for 3 days starting next Monday, need a decent hotel and affordable flights for one person."
+    },
+    {
+      "request_id": "TRAVEL_025",
+      "request": "Find a bus from Stuttgart to Prague leaving soon."
+    }
+  ]
+}

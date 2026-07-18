@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_002",
+  "constraints": [
+    {
+      "id": "HEALTH_002_C1",
+      "description": "The appointment should be scheduled after an overnight fasting period before the test.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A fasting blood glucose test conventionally requires no caloric intake for several hours beforehand, typically overnight, to ensure valid results."
+    },
+    {
+      "id": "HEALTH_002_C2",
+      "description": "The selected lab must offer phlebotomy/sample collection during the requested early-morning window tomorrow.",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Scheduling is only feasible if the lab is operational and accepts blood test appointments at that time."
+    },
+    {
+      "id": "HEALTH_002_C3",
+      "description": "The appointment time should allow the user to remain fasting until sample collection without excessive delay.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Earlier slots are generally preferable for fasting tests, but what counts as excessive delay is not universally fixed."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

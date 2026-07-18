@@ -1,0 +1,63 @@
+{
+  "request_id": "TRAVEL_016",
+  "constraints": [
+    {
+      "id": "TRAVEL_016_C1",
+      "description": "\"station\" must be grounded to a relevant Copenhagen rail station reference point for distance filtering",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request says within 5 kms from station but does not specify which station; planning requires choosing an anchor such as the main central station."
+    },
+    {
+      "id": "TRAVEL_016_C2",
+      "description": "distance filtering should use a practical proximity interpretation within 5 km of the chosen station",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Hotel search systems need a concrete distance computation method and origin point to apply the radius constraint."
+    },
+    {
+      "id": "TRAVEL_016_C3",
+      "description": "stay dates begin on 15 April and require deriving the checkout date from the conditional stay length",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Booking execution needs exact check-in/check-out dates, but checkout depends on whether the stay is 2 or 3 nights."
+    },
+    {
+      "id": "TRAVEL_016_C4",
+      "description": "hotel selection should optimize for a subjective quality notion of \"good\"",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "\"Good hotel\" implies ranking by reviews, ratings, or similar quality signals, but no fixed threshold is given."
+    },
+    {
+      "id": "TRAVEL_016_C5",
+      "description": "booking duration is conditionally determined by nightly price threshold: 3 nights if under 30 EUR per room, otherwise 2 nights",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "This is a decision rule that affects which stay length to book after evaluating price."
+    },
+    {
+      "id": "TRAVEL_016_C6",
+      "description": "price comparison must be performed in EUR on a per-room per-night basis before applying the conditional booking rule",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The threshold is stated, but execution requires normalizing hotel pricing into the specified unit to decide between 2 and 3 nights."
+    },
+    {
+      "id": "TRAVEL_016_C7",
+      "description": "number of rooms defaults to 1",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A hotel booking cannot be completed without a room count, and singular phrasing supports the standard default of one room."
+    }
+  ],
+  "constraint_count": 7,
+  "density": "High"
+}

@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_023",
+  "constraints": [
+    {
+      "id": "TRAVEL_023_C1",
+      "description": "nearest airport of Ulm requires resolving candidate departure airports by proximity to Ulm",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Ulm has no major commercial airport, so planning must infer and compare nearby airports; 'nearest' depends on distance metric and available service."
+    },
+    {
+      "id": "TRAVEL_023_C2",
+      "description": "evening flight requires mapping to an approximate departure-time window later in the day",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Evening is not a universally fixed interval but must be operationalized to filter flights."
+    },
+    {
+      "id": "TRAVEL_023_C3",
+      "description": "late evening flight implies preference for flights toward the end of the evening window",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "'Late' refines the evening preference but remains subjective rather than strictly bounded."
+    },
+    {
+      "id": "TRAVEL_023_C4",
+      "description": "one-way itinerary assumed because no return date or round-trip intent is provided",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A booking/search must choose itinerary type; absent return information, standard default is one-way."
+    },
+    {
+      "id": "TRAVEL_023_C5",
+      "description": "single passenger profile is one adult traveler with no additional passengers",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger composition affects fare availability and booking feasibility."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

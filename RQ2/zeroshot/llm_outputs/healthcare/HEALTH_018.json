@@ -1,0 +1,47 @@
+{
+  "request_id": "HEALTH_018",
+  "constraints": [
+    {
+      "id": "HEALTH_018_C1",
+      "description": "The ultrasound appointment must be scheduled early enough before the gastroenterology follow-up on 4 June 2026 so that the result can be available and usable for that visit.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request says 'before my gastroenterology follow-up'; for coordination, the exam should not only occur earlier but leave practical time for reporting."
+    },
+    {
+      "id": "HEALTH_018_C2",
+      "description": "The phrase 'next Wednesday' must be resolved relative to the request date to determine the actual appointment date.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete booking requires converting the relative day reference into a calendar date."
+    },
+    {
+      "id": "HEALTH_018_C3",
+      "description": "The requested 'afternoon' slot must be interpreted as a standard afternoon time window for scheduling.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Afternoon is not a fixed universal interval, but booking requires mapping it to approximate hours."
+    },
+    {
+      "id": "HEALTH_018_C4",
+      "description": "The selected provider must be a facility that actually performs abdominal ultrasound examinations.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking assumes choosing an appropriate clinic or imaging provider capable of the requested exam."
+    },
+    {
+      "id": "HEALTH_018_C5",
+      "description": "If multiple suitable clinics are available, preference should be given to one with convenient proximity or access to Alexanderplatz.",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "'Near Alexanderplatz' is a fuzzy geographic preference that helps rank options but is not strictly required for feasibility."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

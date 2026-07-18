@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_016",
+  "constraints": [
+    {
+      "id": "HEALTH_016_C1",
+      "description": "next week requires calendar grounding to the upcoming Monday-Sunday interval",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The booking window must be converted into concrete dates before searching for appointments."
+    },
+    {
+      "id": "HEALTH_016_C2",
+      "description": "appointment selection should minimize waiting time by choosing the earliest available slot within the requested period",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Earliest possible appointment is the optimization objective that drives provider and slot selection."
+    },
+    {
+      "id": "HEALTH_016_C3",
+      "description": "service configuration must allow use of private-pay appointment pathways if they provide an earlier slot than standard booking routes",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "The user permits paying privately to improve speed, so planning should consider both standard and private options without conflict."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

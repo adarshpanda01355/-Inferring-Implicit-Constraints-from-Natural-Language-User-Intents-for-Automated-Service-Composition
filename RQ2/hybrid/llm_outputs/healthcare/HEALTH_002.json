@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_002",
+  "constraints": [
+    {
+      "id": "HEALTH_002_C1",
+      "description": "tomorrow must be grounded to the next calendar day relative to the request date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A concrete date is required to search and book an appointment."
+    },
+    {
+      "id": "HEALTH_002_C2",
+      "description": "early in the morning requires interpretation as an approximate morning time window",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The phrase is not executable as-is and must be mapped to a usable booking interval."
+    },
+    {
+      "id": "HEALTH_002_C3",
+      "description": "fasting requirement implies the appointment should be scheduled before normal breakfast time to preserve fasting status",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "For a fasting blood glucose test, timing must support the fasting condition; otherwise the test may be invalid."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

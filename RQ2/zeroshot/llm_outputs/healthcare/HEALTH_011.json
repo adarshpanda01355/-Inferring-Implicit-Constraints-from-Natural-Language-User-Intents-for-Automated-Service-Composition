@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_011",
+  "constraints": [
+    {
+      "id": "HEALTH_011_C1",
+      "description": "\"Next week\" must be resolved to the specific calendar date range immediately following the current week.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Needed to search and schedule within the correct time window."
+    },
+    {
+      "id": "HEALTH_011_C2",
+      "description": "The consultation should be scheduled at a clinic that either has MRI capability on-site or has integrated access to MRI services for later referral if required.",
+      "category": "Logical",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request implies future diagnostic continuity, but acceptable forms of MRI availability may vary."
+    },
+    {
+      "id": "HEALTH_011_C3",
+      "description": "The clinic should be reasonably accessible from Alexanderplatz using practical local transport options.",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "\"Easy to reach\" implies a proximity/travel convenience preference without a fixed threshold."
+    },
+    {
+      "id": "HEALTH_011_C4",
+      "description": "The provider selected must be appropriate for orthopedic consultation in a clinic setting.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires matching the medical specialty and care setting to the requested service."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

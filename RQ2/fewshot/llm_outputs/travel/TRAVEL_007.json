@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_007",
+  "constraints": [
+    {
+      "id": "TRAVEL_007_C1",
+      "description": "\"next available\" requires grounding to the earliest train departure after the current time",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The system must interpret availability relative to now to identify the correct service."
+    },
+    {
+      "id": "TRAVEL_007_C2",
+      "description": "arrival station in Zurich must be resolved to a specific bookable station among multiple Zurich rail stations",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Zurich is a city-level destination, but train booking typically requires a concrete station or city-terminal mapping."
+    },
+    {
+      "id": "TRAVEL_007_C3",
+      "description": "assume one passenger",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Passenger count is required for booking or fare retrieval and is not specified."
+    },
+    {
+      "id": "TRAVEL_007_C4",
+      "description": "optimize selection by earliest feasible departure rather than price or comfort",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "\"Next available\" implies prioritizing immediacy over other ranking criteria."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_006",
+  "constraints": [
+    {
+      "id": "HEALTH_006_C1",
+      "description": "The physiotherapy provider should offer wheelchair-accessible entry without steps or other major barriers.",
+      "category": "Domain-default",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Inferred from the user's wheelchair use and the statement that getting into the building should not be difficult; affects feasibility of attending the appointment."
+    },
+    {
+      "id": "HEALTH_006_C2",
+      "description": "The interior of the facility should be navigable by wheelchair, including sufficient circulation space and absence of major internal obstacles.",
+      "category": "Domain-default",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Inferred from the need to move around inside without difficulty; necessary for reaching reception, treatment rooms, and other relevant areas."
+    },
+    {
+      "id": "HEALTH_006_C3",
+      "description": "Any essential patient-accessible areas needed for the session should be reachable without requiring assistance beyond normal service provision.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "\"Should not be difficult\" implies a practical usability requirement, not just nominal accessibility; affects service quality and independence."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

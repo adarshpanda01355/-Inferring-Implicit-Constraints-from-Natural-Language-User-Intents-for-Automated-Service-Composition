@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_001",
+  "constraints": [
+    {
+      "id": "TRAVEL_001_C1",
+      "description": "Interpret 'tomorrow' relative to the current date at booking time to determine the travel date.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The exact calendar date is not executable without grounding the relative date expression."
+    },
+    {
+      "id": "TRAVEL_001_C2",
+      "description": "Interpret '3 PM' in the local time context of the departure location/date.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The stated time requires grounding to a concrete local datetime for search and booking."
+    },
+    {
+      "id": "TRAVEL_001_C3",
+      "description": "Map 'Stuttgart' and 'Berlin' to specific serviceable airports or airport groups for flight search.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Cities are given, but flight booking requires airport-level origin and destination selection."
+    },
+    {
+      "id": "TRAVEL_001_C4",
+      "description": "Assume the requested flight should depart at or around 3 PM rather than arrive at that time unless otherwise specified.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Travel requests conventionally interpret an unqualified time for a flight as departure time."
+    },
+    {
+      "id": "TRAVEL_001_C5",
+      "description": "Select a valid fare/passenger configuration for one adult traveler under standard airline booking rules.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Useful",
+      "notes": "Booking requires applying standard adult passenger assumptions such as age category and one seat."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

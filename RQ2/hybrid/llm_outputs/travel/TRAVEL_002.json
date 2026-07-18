@@ -1,0 +1,39 @@
+{
+  "request_id": "TRAVEL_002",
+  "constraints": [
+    {
+      "id": "TRAVEL_002_C1",
+      "description": "next weekend requires calendar grounding to the upcoming weekend date range relative to the current date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The booking system needs concrete check-in and check-out dates to search hotels."
+    },
+    {
+      "id": "TRAVEL_002_C2",
+      "description": "near Manyata Tech Park implies a fuzzy proximity threshold around the landmark",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "Nearness affects ranking and selection but does not have a universally fixed distance boundary."
+    },
+    {
+      "id": "TRAVEL_002_C3",
+      "description": "hotel stay defaults to one room",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A hotel search typically requires room count, and one room is the standard default when unspecified."
+    },
+    {
+      "id": "TRAVEL_002_C4",
+      "description": "hotel stay defaults to one guest",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Occupancy is required for valid hotel availability and pricing queries when not otherwise specified."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

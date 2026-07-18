@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_001",
+  "constraints": [
+    {
+      "id": "HEALTH_001_C1",
+      "description": "next Tuesday must be grounded to the upcoming Tuesday in the next calendar week relative to the request date",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Calendar grounding is necessary to search and book an appointment on the correct date."
+    },
+    {
+      "id": "HEALTH_001_C2",
+      "description": "near Feuersee implies a fuzzy proximity threshold around the Feuersee area",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The request specifies locality preference, but 'near' has no fixed distance boundary."
+    },
+    {
+      "id": "HEALTH_001_C3",
+      "description": "provider must be capable of performing a tooth extraction procedure rather than only general dental consultation",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A valid booking requires selecting a provider whose service scope includes extraction."
+    },
+    {
+      "id": "HEALTH_001_C4",
+      "description": "single patient booking is assumed unless otherwise specified",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Healthcare appointment requests normally default to one patient when no group size is given."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

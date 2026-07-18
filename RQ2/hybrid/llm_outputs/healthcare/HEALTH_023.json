@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_023",
+  "constraints": [
+    {
+      "id": "HEALTH_023_C1",
+      "description": "first weekend of next month requires calendar grounding to the first Saturday-Sunday interval of the upcoming month",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The booking window must be converted into concrete dates before searching for appointments."
+    },
+    {
+      "id": "HEALTH_023_C2",
+      "description": "later in the afternoon implies a fuzzy preference for appointments toward the end of typical afternoon hours",
+      "category": "Temporal",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "This affects slot ranking and selection quality but is not strictly required for feasibility."
+    },
+    {
+      "id": "HEALTH_023_C3",
+      "description": "Charlottenburg district must be resolved as a sub-area within Berlin for clinic matching",
+      "category": "Spatial",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The district-level location needs geographic grounding to filter eligible clinics correctly."
+    },
+    {
+      "id": "HEALTH_023_C4",
+      "description": "patient is a minor, so the selected provider must be able to administer MMR vaccination to children",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Not all vaccination providers serve pediatric patients, so age suitability affects feasibility."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}

@@ -1,0 +1,31 @@
+{
+  "request_id": "HEALTH_006",
+  "constraints": [
+    {
+      "id": "HEALTH_006_C1",
+      "description": "The physiotherapy provider should have step-free or wheelchair-accessible building entry.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Inferred from wheelchair use and the need to get into the building without difficulty."
+    },
+    {
+      "id": "HEALTH_006_C2",
+      "description": "The interior of the facility should be wheelchair-navigable, including corridors, doors, and access to the treatment area.",
+      "category": "Domain-default",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "Inferred from the requirement that moving around inside should not be difficult; exact accessibility thresholds vary."
+    },
+    {
+      "id": "HEALTH_006_C3",
+      "description": "Any essential patient-facing amenities needed for the visit should be wheelchair accessible.",
+      "category": "Domain-default",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "A valid accessible appointment may depend on access beyond the entrance and treatment room, but which amenities are essential can vary."
+    }
+  ],
+  "constraint_count": 3,
+  "density": "Medium"
+}

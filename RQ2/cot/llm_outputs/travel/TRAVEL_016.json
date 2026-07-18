@@ -1,0 +1,47 @@
+{
+  "request_id": "TRAVEL_016",
+  "constraints": [
+    {
+      "id": "TRAVEL_016_C1",
+      "description": "The reference station must be inferred as a relevant Copenhagen rail station for measuring the 5 km distance.",
+      "category": "Spatial",
+      "resolvability": "Borderline",
+      "importance": "Critical",
+      "notes": "The request says 'from station' without naming which station; service composition must ground this to a specific station."
+    },
+    {
+      "id": "TRAVEL_016_C2",
+      "description": "The hotel stay should begin on April 15 of the relevant upcoming year.",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "A year is not specified, so booking systems must infer the intended year from context/current date."
+    },
+    {
+      "id": "TRAVEL_016_C3",
+      "description": "The booking should start on or after April 15 depending on hotel availability and booking feasibility.",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "'April 15th onwards' leaves the exact check-in date open rather than fixing a single date."
+    },
+    {
+      "id": "TRAVEL_016_C4",
+      "description": "The hotel should be selected by optimizing for overall quality/suitability under the stated constraints.",
+      "category": "Logical",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The term 'good hotel' is subjective and requires an interpretation such as ratings, reviews, or amenities."
+    },
+    {
+      "id": "TRAVEL_016_C5",
+      "description": "The price comparison should use a normalized total nightly room rate in euros before applying the conditional booking rule.",
+      "category": "Domain-default",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "Hotels may quote prices with taxes, fees, or other currencies; a standard comparable per-night euro rate is needed to decide between 3 nights and 2 nights."
+    }
+  ],
+  "constraint_count": 5,
+  "density": "High"
+}

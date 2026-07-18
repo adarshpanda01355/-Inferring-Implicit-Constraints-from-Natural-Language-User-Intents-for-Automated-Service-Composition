@@ -1,0 +1,39 @@
+{
+  "request_id": "HEALTH_018",
+  "constraints": [
+    {
+      "id": "HEALTH_018_C1",
+      "description": "next Wednesday afternoon requires calendar grounding to the upcoming Wednesday and an afternoon time window",
+      "category": "Temporal",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The booking system needs a concrete date and time range to search for slots."
+    },
+    {
+      "id": "HEALTH_018_C2",
+      "description": "ultrasound appointment must occur before the gastroenterology follow-up on 4 June 2026",
+      "category": "Logical",
+      "resolvability": "Implicit",
+      "importance": "Critical",
+      "notes": "The imaging is intended to precede the follow-up so results can be available for that visit."
+    },
+    {
+      "id": "HEALTH_018_C3",
+      "description": "the ultrasound should be scheduled early enough before the follow-up to allow results to be available at the gastroenterology appointment",
+      "category": "Temporal",
+      "resolvability": "Borderline",
+      "importance": "Useful",
+      "notes": "Exact turnaround time varies by clinic, but some lead time may be needed for reporting and coordination."
+    },
+    {
+      "id": "HEALTH_018_C4",
+      "description": "near Alexanderplatz implies a fuzzy proximity preference within Berlin",
+      "category": "Spatial",
+      "resolvability": "Vague",
+      "importance": "Useful",
+      "notes": "The preferred clinic location is subjective and mainly affects convenience and ranking of options."
+    }
+  ],
+  "constraint_count": 4,
+  "density": "Medium"
+}
