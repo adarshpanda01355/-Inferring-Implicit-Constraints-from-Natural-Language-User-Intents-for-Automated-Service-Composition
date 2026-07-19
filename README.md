@@ -1,6 +1,10 @@
-# Research Project Codebase
+# Supplementary Material
+The supplementary material accompanying this paper is available in this repository and can be accessed directly here:
+https://anonymous.4open.science/r/IICNLUSIASC-72FE/ICSOC_2026_Supplementary_Material.pdf
+This document contains additional implementation details, prompts, datasets, evaluation results, and supporting information that complement the paper.
 
-This repository contains the code and outputs used for the project report.
+# Codebase
+This repository contains the code and outputs used in the paper.
 
 ## Main folders
 
