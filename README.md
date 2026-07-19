@@ -102,7 +102,3 @@ python RQ2/eval/generate_figures.py
   - [iaa/readme.md](iaa/readme.md)
   - [RQ2/generation/readme.md](RQ2/generation/readme.md)
   - [RQ2/eval/readme.md](RQ2/eval/readme.md)
-
-## Usage of AI Tools
-
-The following AI tools were used in preparing the work. Anthropic's Claude Sonnet~4.6 was used to assist with editing and polishing self-authored text. The tool was used to improve phrasing, fix grammatical issues, and improve clarity. The author reviewed and revised all suggested edits and takes full responsibility for the final content. Claude Opus~4.5 was used to brainstorm design decisions for the evaluation pipeline and inference scripts, and to generate initial skeleton code for the Python scripts. Claude Opus~4.5 was additionally used to assist with debugging issues in the Python evaluation scripts. All generated code was reviewed, substantially modified, and tested. The authors reviewed and revised all suggested edits and take full responsibility for the correctness of the content.
